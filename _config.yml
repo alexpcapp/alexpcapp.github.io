@@ -1,6 +1,7 @@
-theme: jekyll-theme-minimal
+#theme: jekyll-theme-minimal
 #title: Alexander's homepage
 #description: Bookmark this to keep an eye on my project updates!
+theme: minima
 
 lsi: false
 safe: true
