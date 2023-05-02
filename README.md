@@ -6,9 +6,7 @@ This is my personal website, hosted on GitHub.
 
 I am a masters student. I live in Denmark. And I'm trying GitHub.
 
-## Horizontal rules
 
-__
 
 ## Emphasis
 
