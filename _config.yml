@@ -28,8 +28,8 @@ description: >
   results) and in your feed.xml site description.
 # Build settings
 
-#theme: minima
-theme: just-the-docs
+theme: minima
+#theme: just-the-docs
 
 plugins:
   - jekyll-feed
