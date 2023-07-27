@@ -18,6 +18,12 @@ firebase.initializeApp(firebaseConfig);
 
 // Add event listener for form submission
 const loginForm = document.getElementById("loginForm");
+const errorText = document.getElementById("errorText"); // Get the error message element
+
+// Function to set the error message text
+function setErrorText(message) {
+  errorText.textContent = message;
+}
 
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
