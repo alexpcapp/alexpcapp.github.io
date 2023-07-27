@@ -1,5 +1,6 @@
 // login.js
 
+
 // Your Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAr877VPCvgyQ3Jdvlw4pcAR4-auvINSTs",
