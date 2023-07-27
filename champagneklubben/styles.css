@@ -25,12 +25,9 @@ form {
 
 /* Style the login form and error message container */
 .login-container {
-    text-align: center; /* Center the container horizontally */
+    text-align: left; /* Center the container horizontally */
 }
-  
-.login-container form {
-    display: inline-block; /* Display the form as inline block */
-}
+
   
 .error-text {
     color: red;
