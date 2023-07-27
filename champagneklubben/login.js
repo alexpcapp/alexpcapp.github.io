@@ -1,3 +1,14 @@
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  console.log("Form submitted");
+  console.log("Email:", email);
+  console.log("Password:", password);
+
+});
+
 // Initialize Firebase with your own config (copy this from your Firebase console)
 const firebaseConfig = {
     apiKey: "AIzaSyAr877VPCvgyQ3Jdvlw4pcAR4-auvINSTs",
