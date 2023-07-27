@@ -77,7 +77,7 @@ champagneForm.addEventListener("submit", async (e) => {
     showSuccessMessage("Review submitted successfully!");
     setTimeout(() => {
       successMessage.style.display = "none";
-    }, 8000); // Hide after 3 seconds (adjust as needed)
+    }, 20000); // Hide after 3 seconds (adjust as needed)
   } catch (error) {
     // Show an error message if there's an issue with submitting the review
     showErrorMessage("Error submitting review. Please try again later.");
