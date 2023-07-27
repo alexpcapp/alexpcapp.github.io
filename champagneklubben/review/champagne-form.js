@@ -87,3 +87,15 @@ champagneForm.addEventListener("submit", async (e) => {
 
 // Hide the error message when the form input fields change
 champagneForm.addEventListener("input", hideErrorMessage);
+
+// Add a listener for the Firebase Authentication state change
+firebase.auth().onAuthStateChanged((user) => {
+    // Check if the user is authenticated and update UI accordingly
+    if (user) {
+      console.log("User is authenticated:", user.uid);
+      // Enable or display any authenticated user-related features here
+    } else {
+      console.log("User is not authenticated.");
+      // Disable or hide any authenticated user-related features here
+    }
+  });
