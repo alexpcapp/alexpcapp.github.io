@@ -13,51 +13,77 @@ const firebaseConfig = {
   };
   
   // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
 
-const champagneForm = document.getElementById("champagneForm");
-const champagneList = document.getElementById("champagneList");
-
-// Add event listener for form submission
-champagneForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const champagneName = document.getElementById("champagneName").value;
-  const rating = document.getElementById("rating").value;
-  const comments = document.getElementById("comments").value;
-
-  // Create a new object to represent the champagne review
-  const champagneReview = {
-    name: champagneName,
-    rating: parseInt(rating),
-    comments: comments,
-  };
-
-  // Save the review to Firebase Realtime Database
-  const database = firebase.database();
-  const reviewsRef = database.ref("champagne_reviews");
-  reviewsRef.push(champagneReview);
-
-  // Clear the form fields after submission
-  champagneForm.reset();
-});
-
-// Retrieve and display existing champagne reviews
-function displayChampagneReviews() {
-  const database = firebase.database();
-  const reviewsRef = database.ref("champagne_reviews");
-
-  reviewsRef.on("value", (snapshot) => {
-    champagneList.innerHTML = ""; // Clear previous list
-
-    snapshot.forEach((childSnapshot) => {
-      const review = childSnapshot.val();
-      const listItem = document.createElement("div");
-      listItem.innerHTML = `<strong>${review.name}</strong> - Rating: ${review.rating}/10<br>${review.comments}<hr>`;
-      champagneList.appendChild(listItem);
-    });
+  // Get references to the HTML elements
+  const champagneForm = document.getElementById("champagneForm");
+  const successMessage = document.getElementById("successMessage");
+  const errorMessage = document.getElementById("errorMessage");
+  
+  // Function to show the success message
+  function showSuccessMessage(message) {
+    successMessage.innerText = message;
+    successMessage.style.display = "block";
+  }
+  
+  // Function to show the error message
+  function showErrorMessage(message) {
+    errorMessage.innerText = message;
+    errorMessage.style.display = "block";
+  }
+  
+  // Function to hide the error message
+  function hideErrorMessage() {
+    errorMessage.style.display = "none";
+  }
+  
+  // Event listener for the form submission
+  champagneForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+  
+    // Get the current authenticated user
+    const user = firebase.auth().currentUser;
+    if (!user) {
+      // If the user is not authenticated, show an error message
+      showErrorMessage("User not authenticated. Please log in.");
+      return;
+    }
+  
+    // Get the user's UID
+    const userId = user.uid;
+  
+    // Get the form input values
+    const champagneName = document.getElementById("champagneName").value;
+    const rating = document.getElementById("rating").value;
+    const comments = document.getElementById("comments").value;
+  
+    // Create a new object to represent the champagne review
+    const champagneReview = {
+      name: champagneName,
+      rating: parseInt(rating),
+      comments: comments,
+      userId: userId, // Include the user's UID in the review data
+    };
+  
+    try {
+      // Save the review to Firebase Realtime Database
+      const database = firebase.database();
+      const reviewsRef = database.ref("champagne_reviews");
+      await reviewsRef.push(champagneReview);
+  
+      // Clear the form fields after successful submission
+      champagneForm.reset();
+      // Show the success message for a few seconds and then hide it
+      showSuccessMessage("Review submitted successfully!");
+      setTimeout(() => {
+        successMessage.style.display = "none";
+      }, 3000); // Hide after 3 seconds (adjust as needed)
+    } catch (error) {
+      // Show an error message if there's an issue with submitting the review
+      showErrorMessage("Error submitting review. Please try again later.");
+      console.error("Error saving review:", error);
+    }
   });
-}
-
-// Call the function to display existing reviews
-displayChampagneReviews();
+  
+  // Hide the error message when the form input fields change
+  champagneForm.addEventListener("input", hideErrorMessage);
