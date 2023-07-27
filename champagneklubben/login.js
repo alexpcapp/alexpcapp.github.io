@@ -11,7 +11,8 @@ const firebaseConfig = {
     appId: "1:6468099736:web:13077310fed28854bf7aed",
     measurementId: "G-0YHBH7C18G"
 };
-  firebase.initializeApp(firebaseConfig);
+
+firebase.initializeApp(firebaseConfig);
 
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
