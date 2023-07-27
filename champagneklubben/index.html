@@ -3,116 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Champagne Tasting Club</title>
+    <title>Champagne Tasting Club - Login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Champagne Tasting Club</h1>
-        <p>Welcome to our club! Please share your champagne tasting experiences below.</p>
+        <h1>Champagne Tasting Club - Login</h1>
     </header>
 
     <main>
-        <form id="champagneForm">
-            <label for="name">Champagne Name:</label>
-            <input type="text" id="name" name="name" required>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-            <label for="brand">Brand:</label>
-            <input type="text" id="brand" name="brand" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-            <label for="vintage">Vintage:</label>
-            <input type="number" id="vintage" name="vintage" required>
-            <label for="rating">Rating (1-10):</label>
-            <input type="number" id="rating" name="rating" min="1" max="10" required>
-
-            <label for="tastingNotes">Tasting Notes:</label>
-            <textarea id="tastingNotes" name="tastingNotes" required></textarea>
-
-            <button type="submit">Submit</button>
+            <button type="submit">Login</button>
         </form>
-
-        <div id="champagneList">
-            <!-- The list of champagnes will be dynamically added here using JavaScript -->
-        </div>
     </main>
 
-    <script src="script.js"></script>
-
-
-<!-- Add this just before the closing </body> tag -->
-
     <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js"></script>
-    <script>
-
-// Initialize Firebase with your own config
-  const firebaseConfig = {
-    apiKey: "tYCQhkfUQ-AqXDxeFqRg7-he6QilO2cXf-PMV3zZXsg",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    databaseURL: "YOUR_DATABASE_URL",
-    projectId: "champagneklubben-7a08f",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
-  };
-  firebase.initializeApp(firebaseConfig);
-</script>
-
-<!-- Add this just before the closing </body> tag, after the Firebase initialization -->
-<script>
-    const form = document.getElementById("champagneForm");
-    const database = firebase.database();
-  
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-  
-      // Get form data
-      const name = document.getElementById("name").value;
-      const brand = document.getElementById("brand").value;
-      const vintage = document.getElementById("vintage").value;
-      const rating = document.getElementById("rating").value;
-      const tastingNotes = document.getElementById("tastingNotes").value;
-  
-      // Store the data in Firebase
-      const champagneRef = database.ref("champagnes");
-      const newChampagneRef = champagneRef.push();
-      newChampagneRef.set({
-        name,
-        brand,
-        vintage,
-        rating,
-        tastingNotes,
-      });
-  
-      // Reset the form after submission
-      form.reset();
-    });
-  </script>
-  
-
-<!-- Add this just before the closing </body> tag, after the Firebase initialization and form handling -->
-<script>
-    const champagneList = document.getElementById("champagneList");
-  
-    // Function to fetch and display champagnes from Firebase
-    function displayChampagnes() {
-      const champagneRef = database.ref("champagnes");
-  
-      champagneRef.on("value", (snapshot) => {
-        champagneList.innerHTML = "";
-        snapshot.forEach((childSnapshot) => {
-          const { name, brand, vintage, rating, tastingNotes } = childSnapshot.val();
-          const listItem = document.createElement("li");
-          listItem.innerHTML = `<strong>${name}</strong> (${brand}, ${vintage}) - Rating: ${rating}/10<br>${tastingNotes}`;
-          champagneList.appendChild(listItem);
-        });
-      });
-    }
-  
-    // Call the function to display the stored champagnes on page load
-    displayChampagnes();
-  </script>
-  
-
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
