@@ -32,7 +32,8 @@ loginForm.addEventListener("submit", (e) => {
       window.location.href = "https://alexpcapp.github.io/champagneklubben/review/champagne-form.html";
     })
     .catch((error) => {
-      // Handle login errors
+      // Handle login errors and show error message
+      setErrorText("Invalid login credentials. Please try again.");
       console.error("Login error:", error.message);
     });
 });
