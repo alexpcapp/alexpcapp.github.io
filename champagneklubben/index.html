@@ -25,7 +25,24 @@
 
     <!-- <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js"></script> -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-compat.js"></script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js';
+        import { getAuth } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js';
+        import { getDatabase } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js';
+      
+        // Your Firebase configuration here
+        const firebaseConfig = {
+          // Your Firebase configuration here
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      
+        // Get the Firebase services you need
+        const auth = getAuth(app);
+        const database = getDatabase(app);
+      </script>
+      
 
     <script src="login.js"></script>
 </body>

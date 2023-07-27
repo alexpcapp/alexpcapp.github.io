@@ -41,7 +41,21 @@
     <!-- <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js"></script> -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-compat.js"></script>
+    <script type="module">
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js';
+      import { getAuth } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js';
+      import { getDatabase } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js';
+    
+    
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    
+      // Get the Firebase services you need
+      const auth = getAuth(app);
+      const database = getDatabase(app);
+    </script>
+    
 
     <script src="champagne_form.js"></script>
 
@@ -66,7 +80,6 @@ const firebaseConfig = {
 <!-- Add this just before the closing </body> tag, after the Firebase initialization -->
 <script>
     const form = document.getElementById("champagneForm");
-    const database = firebase.database();
     let user = null;
   
     // Function to check if the user is authenticated
