@@ -14,6 +14,7 @@ header {
 
 main {
     padding: 20px;
+    text-align: center;
 }
 
 form {
@@ -25,6 +26,7 @@ form {
 
 /* Style the login form and error message container */
 .login-container {
+    display: inline-block;
     text-align: left; /* Center the container horizontally */
 }
   
