@@ -23,11 +23,18 @@ form {
     grid-gap: 10px;
 }
 
-p {
-    max-width: 500px;
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 10px;
+/* Style the login form and error message container */
+.login-container {
+    text-align: center; /* Center the container horizontally */
+}
+  
+.login-container form {
+    display: inline-block; /* Display the form as inline block */
+}
+  
+.error-text {
+    color: red;
+    margin-top: 10px; /* Adjust the margin-top to create space between login form and error message */
 }
 
 form label {
