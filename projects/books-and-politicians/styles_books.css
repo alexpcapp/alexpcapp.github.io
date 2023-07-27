@@ -1,0 +1,188 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+  
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container-books {
+    max-width : 800px;
+    padding-left:15px;
+    margin-right:auto;
+    margin-left:auto
+}
+  
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.header h1 {
+    font-size: 36px;
+    color: #333;
+}
+  
+.header p {
+    font-size: 18px;
+    color: #777;
+}
+  
+.chart {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+  
+  /* Style the data table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+}
+  
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+  
+table th {
+    background-color: #ea2121;
+}
+  
+  /* Style the links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: underline;
+}
+  
+  /* Footer styles */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #777;
+    font-size: 14px;
+}
+  
+.footer a {
+    color: #777;
+}
+  
+  
+.navbar{
+    position:relative;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -ms-flex-align:center;
+    align-items:center;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    padding:.5rem 1rem
+}
+
+@media (max-width:575.98px){
+    .navbar-expand-sm>.container,.navbar-expand-sm>.container-fluid,.navbar-expand-sm>.container-lg,.navbar-expand-sm>.container-md,.navbar-expand-sm>.container-sm,.navbar-expand-sm>.container-xl{
+        padding-right:0;
+        padding-left:0
+    }
+}
+
+@media (min-width:576px){
+    .navbar-expand-sm{
+        -ms-flex-flow:row nowrap;
+        flex-flow:row nowrap;
+        -ms-flex-pack:start;
+        justify-content:flex-start
+    }
+    .navbar-expand-sm .navbar-nav{
+        -ms-flex-direction:row;
+        flex-direction:row
+    }
+    .navbar-expand-sm .navbar-nav .dropdown-menu{
+        position:absolute
+    }
+    .navbar-expand-sm .navbar-nav .nav-link{
+        padding-right:.5rem;
+        padding-left:.5rem
+    }
+    .navbar-expand-sm>.container,.navbar-expand-sm>.container-fluid,.navbar-expand-sm>.container-lg,.navbar-expand-sm>.container-md,.navbar-expand-sm>.container-sm,.navbar-expand-sm>.container-xl{
+        -ms-flex-wrap:nowrap;
+        flex-wrap:nowrap
+    }
+    .navbar-expand-sm .navbar-collapse{
+        display:-ms-flexbox!important;
+        display:flex!important;
+        -ms-flex-preferred-size:auto;
+        flex-basis:auto
+    }
+    .navbar-expand-sm .navbar-toggler{display:none}
+}
+
+.flex-column{-ms-flex-direction:column!important;flex-direction:column!important}
+
+@media (min-width:576px){
+    .flex-sm-row{-ms-flex-direction:row!important;flex-direction:row!important}
+    .flex-sm-column{-ms-flex-direction:column!important;flex-direction:column!important}
+    .flex-sm-row-reverse{-ms-flex-direction:row-reverse!important;flex-direction:row-reverse!important}
+    .flex-sm-column-reverse{-ms-flex-direction:column-reverse!important;flex-direction:column-reverse!important}
+    .flex-sm-wrap{-ms-flex-wrap:wrap!important;flex-wrap:wrap!important}
+    .flex-sm-nowrap{-ms-flex-wrap:nowrap!important;flex-wrap:nowrap!important}
+    .flex-sm-wrap-reverse{-ms-flex-wrap:wrap-reverse!important;flex-wrap:wrap-reverse!important}
+    .flex-sm-fill{-ms-flex:1 1 auto!important;flex:1 1 auto!important}
+    .flex-sm-grow-0{-ms-flex-positive:0!important;flex-grow:0!important}
+    .flex-sm-grow-1{-ms-flex-positive:1!important;flex-grow:1!important}
+    .flex-sm-shrink-0{-ms-flex-negative:0!important;flex-shrink:0!important}
+    .flex-sm-shrink-1{-ms-flex-negative:1!important;flex-shrink:1!important}
+    .justify-content-sm-start{-ms-flex-pack:start!important;justify-content:flex-start!important}
+    .justify-content-sm-end{-ms-flex-pack:end!important;justify-content:flex-end!important}
+    .justify-content-sm-center{-ms-flex-pack:center!important;justify-content:center!important}
+    .justify-content-sm-between{-ms-flex-pack:justify!important;justify-content:space-between!important}
+    .justify-content-sm-around{-ms-flex-pack:distribute!important;justify-content:space-around!important}
+    .align-items-sm-start{-ms-flex-align:start!important;align-items:flex-start!important}
+    .align-items-sm-end{-ms-flex-align:end!important;align-items:flex-end!important}
+    .align-items-sm-center{-ms-flex-align:center!important;align-items:center!important}
+    .align-items-sm-baseline{-ms-flex-align:baseline!important;align-items:baseline!important}
+    .align-items-sm-stretch{-ms-flex-align:stretch!important;align-items:stretch!important}
+    .align-content-sm-start{-ms-flex-line-pack:start!important;align-content:flex-start!important}
+    .align-content-sm-end{-ms-flex-line-pack:end!important;align-content:flex-end!important}
+    .align-content-sm-center{-ms-flex-line-pack:center!important;align-content:center!important}
+    .align-content-sm-between{-ms-flex-line-pack:justify!important;align-content:space-between!important}
+    .align-content-sm-around{-ms-flex-line-pack:distribute!important;align-content:space-around!important}
+    .align-content-sm-stretch{-ms-flex-line-pack:stretch!important;align-content:stretch!important}
+    .align-self-sm-auto{-ms-flex-item-align:auto!important;align-self:auto!important}
+    .align-self-sm-start{-ms-flex-item-align:start!important;align-self:flex-start!important}
+    .align-self-sm-end{-ms-flex-item-align:end!important;align-self:flex-end!important}
+    .align-self-sm-center{-ms-flex-item-align:center!important;align-self:center!important}
+    .align-self-sm-baseline{-ms-flex-item-align:baseline!important;align-self:baseline!important}
+    .align-self-sm-stretch{-ms-flex-item-align:stretch!important;align-self:stretch!important}
+}
+
+.text-nowrap{white-space:nowrap!important}
+
+
+
+.mt-5,.my-5{
+    margin-top:3rem!important;
+    background-color: #f5f5f5;
+}
