@@ -28,7 +28,7 @@ loginForm.addEventListener("submit", (e) => {
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
       // Redirect to the champagne-tasting form page on successful login
-      window.location.href = "champagne_form.html";
+      window.location.href = "https://alexpcapp.github.io/champagneklubben/review/champagne-form.html";
     })
     .catch((error) => {
       // Handle login errors
