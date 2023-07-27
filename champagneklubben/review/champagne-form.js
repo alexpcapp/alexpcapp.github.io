@@ -15,75 +15,75 @@ const firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  // Get references to the HTML elements
-  const champagneForm = document.getElementById("champagneForm");
-  const successMessage = document.getElementById("successMessage");
-  const errorMessage = document.getElementById("errorMessage");
-  
-  // Function to show the success message
-  function showSuccessMessage(message) {
-    successMessage.innerText = message;
-    successMessage.style.display = "block";
+// Get references to the HTML elements
+const champagneForm = document.getElementById("champagneForm");
+const successMessage = document.getElementById("successMessage");
+const errorMessage = document.getElementById("errorMessage");
+
+// Function to show the success message
+function showSuccessMessage(message) {
+  successMessage.innerText = message;
+  successMessage.style.display = "block";
+}
+
+// Function to show the error message
+function showErrorMessage(message) {
+  errorMessage.innerText = message;
+  errorMessage.style.display = "block";
+}
+
+// Function to hide the error message
+function hideErrorMessage() {
+  errorMessage.style.display = "none";
+}
+
+// Event listener for the form submission
+champagneForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  // Get the current authenticated user
+  const user = firebase.auth().currentUser;
+  if (!user) {
+    // If the user is not authenticated, show an error message
+    showErrorMessage("User not authenticated. Please log in.");
+    return;
   }
-  
-  // Function to show the error message
-  function showErrorMessage(message) {
-    errorMessage.innerText = message;
-    errorMessage.style.display = "block";
+
+  // Get the user's UID
+  const userId = user.uid;
+
+  // Get the form input values
+  const champagneName = document.getElementById("champagneName").value;
+  const rating = document.getElementById("rating").value;
+  const comments = document.getElementById("comments").value;
+
+  // Create a new object to represent the champagne review
+  const champagneReview = {
+    name: champagneName,
+    rating: parseInt(rating),
+    comments: comments,
+    userId: userId, // Include the user's UID in the review data
+  };
+
+  try {
+    // Save the review to Firebase Realtime Database
+    const database = firebase.database();
+    const reviewsRef = database.ref("champagne_reviews");
+    await reviewsRef.push(champagneReview);
+
+    // Clear the form fields after successful submission
+    champagneForm.reset();
+    // Show the success message for a few seconds and then hide it
+    showSuccessMessage("Review submitted successfully!");
+    setTimeout(() => {
+      successMessage.style.display = "none";
+    }, 3000); // Hide after 3 seconds (adjust as needed)
+  } catch (error) {
+    // Show an error message if there's an issue with submitting the review
+    showErrorMessage("Error submitting review. Please try again later.");
+    console.error("Error saving review:", error);
   }
-  
-  // Function to hide the error message
-  function hideErrorMessage() {
-    errorMessage.style.display = "none";
-  }
-  
-  // Event listener for the form submission
-  champagneForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-  
-    // Get the current authenticated user
-    const user = firebase.auth().currentUser;
-    if (!user) {
-      // If the user is not authenticated, show an error message
-      showErrorMessage("User not authenticated. Please log in.");
-      return;
-    }
-  
-    // Get the user's UID
-    const userId = user.uid;
-  
-    // Get the form input values
-    const champagneName = document.getElementById("champagneName").value;
-    const rating = document.getElementById("rating").value;
-    const comments = document.getElementById("comments").value;
-  
-    // Create a new object to represent the champagne review
-    const champagneReview = {
-      name: champagneName,
-      rating: parseInt(rating),
-      comments: comments,
-      userId: userId, // Include the user's UID in the review data
-    };
-  
-    try {
-      // Save the review to Firebase Realtime Database
-      const database = firebase.database();
-      const reviewsRef = database.ref("champagne_reviews");
-      await reviewsRef.push(champagneReview);
-  
-      // Clear the form fields after successful submission
-      champagneForm.reset();
-      // Show the success message for a few seconds and then hide it
-      showSuccessMessage("Review submitted successfully!");
-      setTimeout(() => {
-        successMessage.style.display = "none";
-      }, 3000); // Hide after 3 seconds (adjust as needed)
-    } catch (error) {
-      // Show an error message if there's an issue with submitting the review
-      showErrorMessage("Error submitting review. Please try again later.");
-      console.error("Error saving review:", error);
-    }
-  });
-  
-  // Hide the error message when the form input fields change
-  champagneForm.addEventListener("input", hideErrorMessage);
+});
+
+// Hide the error message when the form input fields change
+champagneForm.addEventListener("input", hideErrorMessage);
