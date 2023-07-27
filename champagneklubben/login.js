@@ -1,13 +1,4 @@
-loginForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
 
-  console.log("Form submitted");
-  console.log("Email:", email);
-  console.log("Password:", password);
-
-});
 
 // Initialize Firebase with your own config (copy this from your Firebase console)
 const firebaseConfig = {
@@ -21,6 +12,17 @@ const firebaseConfig = {
     measurementId: "G-0YHBH7C18G"
 };
   firebase.initializeApp(firebaseConfig);
+
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+  
+    console.log("Form submitted");
+    console.log("Email:", email);
+    console.log("Password:", password);
+  
+  });
   
   const loginForm = document.getElementById("loginForm");
   
