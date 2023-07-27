@@ -1,3 +1,6 @@
+// champagne_form.js
+
+// Your Firebase configuration (You can re-use the same configuration as in login.js)
 const firebaseConfig = {
     apiKey: "AIzaSyAr877VPCvgyQ3Jdvlw4pcAR4-auvINSTs",
     authDomain: "champagneklubben-7a08f.firebaseapp.com",
@@ -7,19 +10,54 @@ const firebaseConfig = {
     messagingSenderId: "6468099736",
     appId: "1:6468099736:web:13077310fed28854bf7aed",
     measurementId: "G-0YHBH7C18G"
-};
-
+  };
+  
+  // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// Function to check if the user is authenticated
-function checkAuthState() {
-  firebase.auth().onAuthStateChanged((user) => {
-    if (!user) {
-      // User is not authenticated, redirect to the login page
-      window.location.href = "login.html";
-    }
+const champagneForm = document.getElementById("champagneForm");
+const champagneList = document.getElementById("champagneList");
+
+// Add event listener for form submission
+champagneForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const champagneName = document.getElementById("champagneName").value;
+  const rating = document.getElementById("rating").value;
+  const comments = document.getElementById("comments").value;
+
+  // Create a new object to represent the champagne review
+  const champagneReview = {
+    name: champagneName,
+    rating: parseInt(rating),
+    comments: comments,
+  };
+
+  // Save the review to Firebase Realtime Database
+  const database = firebase.database();
+  const reviewsRef = database.ref("champagne_reviews");
+  reviewsRef.push(champagneReview);
+
+  // Clear the form fields after submission
+  champagneForm.reset();
+});
+
+// Retrieve and display existing champagne reviews
+function displayChampagneReviews() {
+  const database = firebase.database();
+  const reviewsRef = database.ref("champagne_reviews");
+
+  reviewsRef.on("value", (snapshot) => {
+    champagneList.innerHTML = ""; // Clear previous list
+
+    snapshot.forEach((childSnapshot) => {
+      const review = childSnapshot.val();
+      const listItem = document.createElement("div");
+      listItem.innerHTML = `<strong>${review.name}</strong> - Rating: ${review.rating}/10<br>${review.comments}<hr>`;
+      champagneList.appendChild(listItem);
+    });
   });
 }
 
-// Call checkAuthState() when the page loads
-checkAuthState();
+// Call the function to display existing reviews
+displayChampagneReviews();
