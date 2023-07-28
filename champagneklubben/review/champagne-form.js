@@ -48,6 +48,8 @@ countrySelect.addEventListener("change", () => {
   } else {
     // If a specific country is selected, hide the custom country input field
     customCountryInput.style.display = "none";
+    // Reset the custom country input field value to an empty string
+    customCountryInput.value = "";
   }
 });
 
@@ -97,7 +99,7 @@ champagneForm.addEventListener("submit", async (e) => {
       const customCountry = customCountryInput.value.trim();
 
       // Check if the selected country is "Other"
-      if (selectedCountry === "Other" && customCountry !== "") {
+      if (selectedCountry === "addNewCountry" && customCountry !== "") {
         // Use the custom country if "Other" is selected and the user provided input
         // (you can perform validation if needed)
 
