@@ -136,6 +136,7 @@ champagneForm.addEventListener("submit", async (e) => {
   const champagneName = document.getElementById("champagneName").value;
   const champagneCategory = document.getElementById("category").value;
   const champagneCountry = document.getElementById("country").value;
+  const champagneTaste = document.getElementById("taste").value;
   const rating = document.getElementById("rating").value;
   const comments = document.getElementById("comments").value;
 
@@ -144,6 +145,7 @@ champagneForm.addEventListener("submit", async (e) => {
     name: champagneName,
     category: champagneCategory,
     country: champagneCountry,
+    taste: champagneTaste,
     rating: parseInt(rating),
     comments: comments,
     userId: userId, // Include the user's UID in the review data
