@@ -39,11 +39,18 @@ function displayReviewsWithChart() {
           document.getElementById("visualizationContainer").innerHTML = "<p>No reviews available.</p>";
           return;
         }
+
+        // Calculate the number of bottles for each country
+        const countryCounts = calculateCountryCounts(reviewsData);
+
+        // Get the country names and bottle counts as separate arrays
+        const countryNames = Object.keys(countryCounts);
+        const bottleCounts = Object.values(countryCounts);
   
         // Initialize arrays to store data for the chart
         //const categories = [];
         //const ratings = [];
-        const countryNames = []; // Only store the country names
+        //const countryNames = []; // Only store the country names
         
         // Process the data and add country names to the array
             Object.keys(reviewsData).forEach((reviewKey) => {
@@ -77,7 +84,8 @@ function displayReviewsWithChart() {
             datasets: [{
               label: "Number of bottles",
               //data: ratings,
-              data: calculateCountryCounts(reviewsData), // Calculate the count of bottles for each country
+              //data: calculateCountryCounts(reviewsData), // Calculate the count of bottles for each country
+              data: bottleCounts, // Use the bottle counts as data
               backgroundColor: "rgba(75, 192, 192, 0.2)",
               borderColor: "rgba(75, 192, 192, 1)",
               borderWidth: 1,
@@ -108,6 +116,8 @@ function calculateCountryCounts(reviewsData) {
       const review = reviewsData[reviewKey];
       const country = review.country || "Unknown Country";
   
+
+      
       // Increment the count for the corresponding country
       countryCounts[country] = (countryCounts[country] || 0) + 1;
     });
