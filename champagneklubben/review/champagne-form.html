@@ -22,9 +22,11 @@
     </header>
 
     <main>
+
+      <h2>Ny anmeldelse herunder</h2>
       <form id="champagneForm">
           <label for="champagneName">Champagne Name:</label>
-          <input type="text" id="champagneName" name="champagneName" required>
+          <input type="text" id="champagneName" name="champagneName" placeholder="Navn på champagne" required>
 
           <label for="country">Country:</label>
           <select name="country" id="country">
@@ -101,7 +103,7 @@
           </select>
 
           <label for="comments">Comments:</label>
-          <textarea id="comments" name="comments" rows="4"></textarea>
+          <textarea id="comments" name="comments" rows="2" placeholder="Comment on missing types, countries, areas, etc."></textarea>
 
           <button type="submit">Submit</button>
       </form>
