@@ -1,21 +1,28 @@
+<!-- visualization.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css">
-  <title>Data Page</title>
+  <title>Champagne Reviews Visualization</title>
 </head>
 <body>
-  <h1>Data Page</h1>
-  <div id="dataContainer">
-    <!-- The data will be dynamically added here -->
+  <header>
+    <h1>Champagne Reviews Visualization</h1>
+  </header>
+
+  <div id="visualizationContainer">
+    <!-- Data will be displayed here -->
   </div>
 
-  <!-- Add your JavaScript code here to fetch and display the data -->
-  <script src="path/to/firebase-config.js"></script>
-  <script src="path/to/firebase-app.js"></script>
-  <script src="path/to/firebase-database.js"></script>
-  <script src="path/to/data_page.js"></script>
+
+  <!-- Include the Firebase SDK -->
+    <!-- Make sure to replace "YOUR_FIREBASE_CONFIG" with your actual Firebase configuration -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js"></script>
+  
+    <script src="visualization.js"></script>
 </body>
 </html>
