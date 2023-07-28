@@ -126,6 +126,7 @@ champagneForm.addEventListener("submit", async (e) => {
 
   // Get the form input values
   const champagneName = document.getElementById("champagneName").value;
+  const champagneCategory = document.getElementById("category").value;
   const champagneCountry = document.getElementById("country").value;
   const rating = document.getElementById("rating").value;
   const comments = document.getElementById("comments").value;
@@ -133,6 +134,7 @@ champagneForm.addEventListener("submit", async (e) => {
   // Create a new object to represent the champagne review
   const champagneReview = {
     name: champagneName,
+    category: champagneCategory,
     country: champagneCountry,
     rating: parseInt(rating),
     comments: comments,
