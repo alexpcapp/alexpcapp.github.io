@@ -16,6 +16,15 @@ const firebaseConfig = {
 // Reference to the "reviews" node in the Firebase Realtime Database
 const reviewsRef = firebase.database().ref("champagne_reviews");
 
+Object.keys(reviewsData).forEach((reviewKey) => {
+    const review = reviewsData[reviewKey];
+    const champagneName = review.champagneName || "Unknown Champagne";
+    const category = review.category || "Unknown Category";
+    const rating = review.rating || "N/A";
+  
+    // Process the data and create the chart as needed...
+  });
+
 // Function to fetch and display the data
 function displayReviews() {
   reviewsRef.once("value")
