@@ -87,10 +87,15 @@ champagneForm.addEventListener("submit", async (e) => {
       // Get the user's input from the new category input field
       const newCategory = newCategoryInput.value.trim();
 
-      // Check if the selected category is the "Add New Category" option
+      let category = "";
+
+        // Handle the category selection
       if (selectedCategory === "addNew" && newCategory !== "") {
-        // Save the new category to the database (you can modify this part as per your database structure)
-        await saveNewCategoryToDatabase(newCategory);
+        // Use the new category if "Add New Category" is selected and the user provided input
+      category = newCategory;
+      } else if (selectedCategory !== "addNew") {
+        // Use the selected category from the drop-down list
+        category = selectedCategory;
       }
 
     // --- Wine country --- //
