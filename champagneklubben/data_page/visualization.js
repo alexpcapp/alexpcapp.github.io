@@ -123,3 +123,67 @@ function displayReviewsWithChart() {
   
   // Call the function to fetch and display the data with Chart.js
   displayReviewsWithChart();
+
+
+  // Function to fetch and display the data using Chart.js
+function displayReviewsWithChart() {
+    reviewsRef.once("value")
+      .then((snapshot) => {
+        // Get the data from the snapshot
+        const reviewsData = snapshot.val();
+  
+        // Check if there are any reviews in the database
+        if (!reviewsData) {
+          // If there are no reviews, display a message
+          document.getElementById("visualizationContainer").innerHTML = "<p>No reviews available.</p>";
+          return;
+        }
+  
+        // Initialize arrays to store data for the chart
+        const categories = [];
+        const ratings = [];
+  
+        // Process the data and add it to the arrays
+        Object.keys(reviewsData).forEach((reviewKey) => {
+          const review = reviewsData[reviewKey];
+          const champagneName = review.champagneName || "Unknown Champagne";
+          const category = review.category || "Unknown Category";
+          const country = review.country || "Unknown Country";
+          const rating = review.rating || "N/A";
+  
+          categories.push(`${champagneName} - Category: ${category} - Country: ${country}`);
+          ratings.push(rating);
+        });
+  
+        // Create a bar chart using Chart.js
+        const ctx = document.getElementById("champagneChart").getContext("2d");
+  
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: categories,
+            datasets: [{
+              label: "Ratings",
+              data: ratings,
+              backgroundColor: "rgba(75, 192, 192, 0.2)",
+              borderColor: "rgba(75, 192, 192, 1)",
+              borderWidth: 1,
+            }],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 10,
+              },
+            },
+          },
+        });
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }
+  
+  // Call the function to fetch and display the data with Chart.js
+  displayReviewsWithChart();
