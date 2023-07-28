@@ -12,6 +12,12 @@ header {
     text-align: center;
 }
 
+/* CSS to hide elements with the "hidden" class */
+.hidden {
+    display: none;
+  }
+  
+
 main {
     padding: 20px;
 }
