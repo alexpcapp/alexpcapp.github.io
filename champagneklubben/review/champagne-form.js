@@ -43,7 +43,7 @@ categorySelect.addEventListener("change", () => {
 // Event listener for changes in the drop-down list
 countrySelect.addEventListener("change", () => {
   if (countrySelect.value === "addNewCountry") {
-    // If "Other" is selected, show the custom country input field
+    // If "addNewCountry" is selected, show the custom country input field
     customCountryInput.style.display = "block";
   } else {
     // If a specific country is selected, hide the custom country input field
@@ -98,9 +98,9 @@ champagneForm.addEventListener("submit", async (e) => {
       // Get the user's input from the custom country input field
       const customCountry = customCountryInput.value.trim();
 
-      // Check if the selected country is "Other"
+      // Check if the selected country is "addNewCountry"
       if (selectedCountry === "addNewCountry" && customCountry !== "") {
-        // Use the custom country if "Other" is selected and the user provided input
+        // Use the custom country if "addNewCountry" is selected and the user provided input
         // (you can perform validation if needed)
 
         // Set the country variable to the custom country input
