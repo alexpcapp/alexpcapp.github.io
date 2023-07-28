@@ -53,13 +53,13 @@ function displayReviewsWithChart() {
         //const countryNames = []; // Only store the country names
         
         // Process the data and add country names to the array
-            Object.keys(reviewsData).forEach((reviewKey) => {
-                const review = reviewsData[reviewKey];
-                const country = review.country || "Unknown Country";
+            //Object.keys(reviewsData).forEach((reviewKey) => {
+            //    const review = reviewsData[reviewKey];
+             //   const country = review.country || "Unknown Country";
                 
             // Add the country name to the array
-            countryNames.push(country);
-        });
+            //countryNames.push(country);
+        //});
 
   
         // Process the data and add it to the arrays
@@ -116,14 +116,11 @@ function calculateCountryCounts(reviewsData) {
       const review = reviewsData[reviewKey];
       const country = review.country || "Unknown Country";
   
-
-      
       // Increment the count for the corresponding country
       countryCounts[country] = (countryCounts[country] || 0) + 1;
     });
   
-    // Convert the counts object to an array
-    return Object.values(countryCounts);
+    return countryCounts;
   }
   
   // Call the function to fetch and display the data with Chart.js
