@@ -147,6 +147,7 @@ champagneForm.addEventListener("submit", async (e) => {
 
   // Create a new object to represent the champagne review
   const champagneReview = {
+    dateSubmitted: dateSubmitted,
     name: champagneName,
     category: champagneCategory,
     country: champagneCountry,
@@ -161,11 +162,6 @@ champagneForm.addEventListener("submit", async (e) => {
     const database = firebase.database();
     const reviewsRef = database.ref("champagne_reviews");
     await reviewsRef.push(champagneReview);
-    const reviewData = {
-      category: category,
-      rating: rating,
-      dateSubmitted: dateSubmitted,
-    }
 
     // Clear the form fields after successful submission
     champagneForm.reset();
@@ -178,7 +174,6 @@ champagneForm.addEventListener("submit", async (e) => {
     // Show an error message if there's an issue with submitting the review
     showErrorMessage("Error submitting review. Please try again later.");
     console.error("Error saving review:", error);
-    alert("An error occurred while submitting the review. Please try again later.");
   }
 });
 
