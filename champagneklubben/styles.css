@@ -17,6 +17,11 @@ main {
     text-align: center;
 }
 
+/* CSS to hide elements with the "hidden" class */
+.hidden {
+    display: none;
+}
+
 form {
     max-width: 500px;
     margin: 0 auto;
