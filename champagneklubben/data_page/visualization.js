@@ -13,12 +13,8 @@ const firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  // visualization.js
-
-// Initialize Firebase (make sure to replace "YOUR_FIREBASE_CONFIG" with your actual Firebase configuration)
-
 // Reference to the "reviews" node in the Firebase Realtime Database
-const reviewsRef = firebase.database().ref("reviews");
+const reviewsRef = firebase.database().ref("champagne_reviews");
 
 // Function to fetch and display the data
 function displayReviews() {
