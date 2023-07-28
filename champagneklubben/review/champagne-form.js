@@ -20,6 +20,22 @@ const champagneForm = document.getElementById("champagneForm");
 const successMessage = document.getElementById("successMessage");
 const errorMessage = document.getElementById("errorMessage");
 
+// Champagne-category
+const categorySelect = document.getElementById("category");
+const newCategoryInput = document.getElementById("newCategory");
+
+// Event listener for changes in the drop-down menu
+categorySelect.addEventListener("change", () => {
+  if (categorySelect.value === "addNew") {
+    // If "Add New Category" is selected, show the input field
+    newCategoryInput.style.display = "block";
+  } else {
+    // If another option is selected, hide the input field
+    newCategoryInput.style.display = "none";
+  }
+});
+
+
 // Function to show the success message
 function showSuccessMessage(message) {
   successMessage.innerText = message;
@@ -37,9 +53,23 @@ function hideErrorMessage() {
   errorMessage.style.display = "none";
 }
 
+
+// ----- Form Submission ----- //
 // Event listener for the form submission
 champagneForm.addEventListener("submit", async (e) => {
   e.preventDefault();
+
+  // Get the selected wine-category from the drop-down menu
+  const selectedCategory = categorySelect.value;
+
+  // Get the user's input from the new category input field
+  const newCategory = newCategoryInput.value.trim();
+
+  // Check if the selected category is the "Add New Category" option
+  if (selectedCategory === "addNew" && newCategory !== "") {
+    // Save the new category to the database (you can modify this part as per your database structure)
+    await saveNewCategoryToDatabase(newCategory);
+  }
 
   // Get the current authenticated user
   const user = firebase.auth().currentUser;
