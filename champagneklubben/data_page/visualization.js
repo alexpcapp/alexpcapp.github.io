@@ -41,20 +41,31 @@ function displayReviewsWithChart() {
         }
   
         // Initialize arrays to store data for the chart
-        const categories = [];
-        const ratings = [];
+        //const categories = [];
+        //const ratings = [];
+        const countryNames = []; // Only store the country names
+        
+        // Process the data and add country names to the array
+            Object.keys(reviewsData).forEach((reviewKey) => {
+                const review = reviewsData[reviewKey];
+                const country = review.country || "Unknown Country";
+                
+            // Add the country name to the array
+            countryNames.push(country);
+        });
+
   
         // Process the data and add it to the arrays
-        Object.keys(reviewsData).forEach((reviewKey) => {
-          const review = reviewsData[reviewKey];
-          const champagneName = review.champagneName || "Unknown Champagne";
-          const category = review.category || "Unknown Category";
-          const country = review.country || "Unknown Country";
-          const rating = review.rating || "N/A";
+        //Object.keys(reviewsData).forEach((reviewKey) => {
+        //  const review = reviewsData[reviewKey];
+        //  const champagneName = review.champagneName || "Unknown Champagne";
+        //  const category = review.category || "Unknown Category";
+        //  const country = review.country || "Unknown Country";
+        //  const rating = review.rating || "N/A";
   
-          categories.push(`${champagneName} - Category: ${category} - Country: ${country}`);
-          ratings.push(rating);
-        });
+        //  categories.push(`${champagneName} - Category: ${category} - Country: ${country}`);
+        //  ratings.push(rating);
+        //});
   
         // Create a bar chart using Chart.js
         const ctx = document.getElementById("champagneChart").getContext("2d");
@@ -62,10 +73,11 @@ function displayReviewsWithChart() {
         new Chart(ctx, {
           type: "bar",
           data: {
-            labels: categories,
+            labels: countryNames,
             datasets: [{
-              label: "Ratings",
-              data: ratings,
+              label: "Number of bottles",
+              //data: ratings,
+              data: calculateCountryCounts(reviewsData), // Calculate the count of bottles for each country
               backgroundColor: "rgba(75, 192, 192, 0.2)",
               borderColor: "rgba(75, 192, 192, 1)",
               borderWidth: 1,
@@ -75,7 +87,8 @@ function displayReviewsWithChart() {
             scales: {
               y: {
                 beginAtZero: true,
-                max: 10,
+                //max: 10,
+                stepSize: 1, // Ensure y-axis labels are integers
               },
             },
           },
@@ -84,6 +97,23 @@ function displayReviewsWithChart() {
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
+  }
+
+// Function to calculate the count of bottles for each country
+function calculateCountryCounts(reviewsData) {
+    const countryCounts = {};
+  
+    // Process the data and count bottles for each country
+    Object.keys(reviewsData).forEach((reviewKey) => {
+      const review = reviewsData[reviewKey];
+      const country = review.country || "Unknown Country";
+  
+      // Increment the count for the corresponding country
+      countryCounts[country] = (countryCounts[country] || 0) + 1;
+    });
+  
+    // Convert the counts object to an array
+    return Object.values(countryCounts);
   }
   
   // Call the function to fetch and display the data with Chart.js
