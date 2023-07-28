@@ -124,12 +124,14 @@ champagneForm.addEventListener("submit", async (e) => {
 
   // Get the form input values
   const champagneName = document.getElementById("champagneName").value;
+  const champagneCountry = document.getElementById("country").value;
   const rating = document.getElementById("rating").value;
   const comments = document.getElementById("comments").value;
 
   // Create a new object to represent the champagne review
   const champagneReview = {
     name: champagneName,
+    country: champagneCountry,
     rating: parseInt(rating),
     comments: comments,
     userId: userId, // Include the user's UID in the review data
