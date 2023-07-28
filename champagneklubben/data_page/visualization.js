@@ -53,3 +53,68 @@ function displayReviews() {
 
 // Call the function to fetch and display the data
 displayReviews();
+
+
+// Function to fetch and display the data using Chart.js
+function displayReviewsWithChart() {
+    reviewsRef.once("value")
+      .then((snapshot) => {
+        // Get the data from the snapshot
+        const reviewsData = snapshot.val();
+  
+        // Check if there are any reviews in the database
+        if (!reviewsData) {
+          // If there are no reviews, display a message
+          document.getElementById("visualizationContainer").innerHTML = "<p>No reviews available.</p>";
+          return;
+        }
+  
+        // Calculate the percentage of bottles from each country
+        const countryCounts = {};
+        Object.keys(reviewsData).forEach((reviewKey) => {
+          const review = reviewsData[reviewKey];
+          const country = review.country;
+          if (country) {
+            countryCounts[country] = (countryCounts[country] || 0) + 1;
+          }
+        });
+  
+        const totalReviews = Object.values(countryCounts).reduce((acc, count) => acc + count, 0);
+        const countryPercentages = {};
+        Object.keys(countryCounts).forEach((country) => {
+          countryPercentages[country] = (countryCounts[country] / totalReviews) * 100;
+        });
+  
+        // Create a bar chart using Chart.js
+        const ctx = document.getElementById("champagneChart").getContext("2d");
+  
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: Object.keys(countryPercentages),
+            datasets: [{
+              label: "Percentage of Bottles",
+              data: Object.values(countryPercentages),
+              backgroundColor: "rgba(75, 192, 192, 0.2)",
+              borderColor: "rgba(75, 192, 192, 1)",
+              borderWidth: 1,
+            }],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 100, // Set the maximum value of the y-axis to 100 (percentage)
+                callback: (value) => `${value}%`, // Add percentage symbol to y-axis labels
+              },
+            },
+          },
+        });
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }
+  
+  // Call the function to fetch and display the data with Chart.js
+  displayReviewsWithChart();
