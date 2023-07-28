@@ -35,6 +35,22 @@ categorySelect.addEventListener("change", () => {
   }
 });
 
+// --- Wine country-dropdown --- //
+  // Get references to the drop-down list and custom country input
+  const countrySelect = document.getElementById("country");
+  const customCountryInput = document.getElementById("newCountry");
+
+// Event listener for changes in the drop-down list
+countrySelect.addEventListener("change", () => {
+  if (countrySelect.value === "addNewCountry") {
+    // If "Other" is selected, show the custom country input field
+    customCountryInput.style.display = "block";
+  } else {
+    // If a specific country is selected, hide the custom country input field
+    customCountryInput.style.display = "none";
+  }
+});
+
 
 // Function to show the success message
 function showSuccessMessage(message) {
@@ -59,17 +75,41 @@ function hideErrorMessage() {
 champagneForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  // Get the selected wine-category from the drop-down menu
-  const selectedCategory = categorySelect.value;
+    // --- Wine category --- //
+      // Get the selected wine-category from the drop-down menu
+      const selectedCategory = categorySelect.value;
 
-  // Get the user's input from the new category input field
-  const newCategory = newCategoryInput.value.trim();
+      // Get the user's input from the new category input field
+      const newCategory = newCategoryInput.value.trim();
 
-  // Check if the selected category is the "Add New Category" option
-  if (selectedCategory === "addNew" && newCategory !== "") {
-    // Save the new category to the database (you can modify this part as per your database structure)
-    await saveNewCategoryToDatabase(newCategory);
-  }
+      // Check if the selected category is the "Add New Category" option
+      if (selectedCategory === "addNew" && newCategory !== "") {
+        // Save the new category to the database (you can modify this part as per your database structure)
+        await saveNewCategoryToDatabase(newCategory);
+      }
+
+    // --- Wine country --- //
+
+      // Get the selected country from the drop-down list
+      const selectedCountry = countrySelect.value;
+
+      // Get the user's input from the custom country input field
+      const customCountry = customCountryInput.value.trim();
+
+      // Check if the selected country is "Other"
+      if (selectedCountry === "Other" && customCountry !== "") {
+        // Use the custom country if "Other" is selected and the user provided input
+        // (you can perform validation if needed)
+
+        // Set the country variable to the custom country input
+        var country = customCountry;
+      } else {
+        // Use the selected country from the drop-down list
+        var country = selectedCountry;
+      }
+
+  
+
 
   // Get the current authenticated user
   const user = firebase.auth().currentUser;
