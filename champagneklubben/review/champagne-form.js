@@ -77,10 +77,13 @@ function hideErrorMessage() {
 champagneForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
+    // --- Rating --- //
+      // Get the selected rating from the dropdown menu
+      const ratingDropdown = parseInt(document.getElementById("rating").value);
+
     // --- Wine category --- //
       // Get the selected wine-category from the drop-down menu
       const selectedCategory = categorySelect.value;
-
       // Get the user's input from the new category input field
       const newCategory = newCategoryInput.value.trim();
 
