@@ -77,6 +77,11 @@ function hideErrorMessage() {
 champagneForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
+    // --- Date ---//
+    // Get the current date and time
+    const currentDate = new Date();
+    const dateSubmitted = currentDate.toISOString(); // Convert to a string format that Firebase can handle
+
     // --- Rating --- //
       // Get the selected rating from the dropdown menu
       const ratingDropdown = parseInt(document.getElementById("rating").value);
@@ -156,6 +161,11 @@ champagneForm.addEventListener("submit", async (e) => {
     const database = firebase.database();
     const reviewsRef = database.ref("champagne_reviews");
     await reviewsRef.push(champagneReview);
+    const reviewData = {
+      category: category,
+      rating: rating,
+      dateSubmitted: dateSubmitted,
+    }
 
     // Clear the form fields after successful submission
     champagneForm.reset();
@@ -168,6 +178,7 @@ champagneForm.addEventListener("submit", async (e) => {
     // Show an error message if there's an issue with submitting the review
     showErrorMessage("Error submitting review. Please try again later.");
     console.error("Error saving review:", error);
+    alert("An error occurred while submitting the review. Please try again later.");
   }
 });
 
