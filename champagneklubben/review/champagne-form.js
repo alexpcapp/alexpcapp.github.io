@@ -77,10 +77,7 @@ function hideErrorMessage() {
 champagneForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-    // --- Date ---//
-    // Get the current date and time
-    const currentDate = new Date();
-    const dateSubmitted = currentDate.toISOString(); // Convert to a string format that Firebase can handle
+    
 
     // --- Rating --- //
       // Get the selected rating from the dropdown menu
@@ -138,6 +135,10 @@ champagneForm.addEventListener("submit", async (e) => {
   const userId = user.uid;
 
   // Get the form input values
+    // --- Date ---//
+    // Get the current date and time
+  const currentDate = new Date();
+  const dateSubmitted = currentDate.toISOString(); // Convert to a string format that Firebase can handle
   const champagneName = document.getElementById("champagneName").value;
   const champagneCategory = document.getElementById("category").value;
   const champagneCountry = document.getElementById("country").value;
@@ -147,7 +148,7 @@ champagneForm.addEventListener("submit", async (e) => {
 
   // Create a new object to represent the champagne review
   const champagneReview = {
-    dateSubmitted: dateSubmitted,
+    date_review: dateSubmitted,
     name: champagneName,
     category: champagneCategory,
     country: champagneCountry,
