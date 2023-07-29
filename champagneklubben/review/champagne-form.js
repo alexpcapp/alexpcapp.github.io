@@ -92,10 +92,10 @@ champagneForm.addEventListener("submit", async (e) => {
       let category = "";
 
         // Handle the category selection
-      if (selectedCategory === "addNew" && newCategory !== "") {
+      if (selectedCategory === "other" && newCategory !== "") {
         // Use the new category if "Add New Category" is selected and the user provided input
       category = newCategory;
-      } else if (selectedCategory !== "addNew") {
+      } else if (selectedCategory !== "other") {
         // Use the selected category from the drop-down list
         category = selectedCategory;
       }
@@ -109,7 +109,7 @@ champagneForm.addEventListener("submit", async (e) => {
       const customCountry = customCountryInput.value.trim();
 
       // Check if the selected country is "addNewCountry"
-      if (selectedCountry === "addNewCountry" && customCountry !== "") {
+      if (selectedCountry === "other" && customCountry !== "") {
         // Use the custom country if "addNewCountry" is selected and the user provided input
         // (you can perform validation if needed)
 
