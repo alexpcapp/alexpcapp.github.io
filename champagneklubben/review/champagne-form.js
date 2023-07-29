@@ -26,7 +26,7 @@ const newCategoryInput = document.getElementById("newCategory");
 
 // Event listener for changes in the drop-down menu
 categorySelect.addEventListener("change", () => {
-  if (categorySelect.value === "addNew") {
+  if (categorySelect.value === "other") {
     // If "Add New Category" is selected, show the input field
     newCategoryInput.style.display = "block";
   } else {
@@ -42,7 +42,7 @@ categorySelect.addEventListener("change", () => {
 
 // Event listener for changes in the drop-down list
 countrySelect.addEventListener("change", () => {
-  if (countrySelect.value === "addNewCountry") {
+  if (countrySelect.value === "other") {
     // If "addNewCountry" is selected, show the custom country input field
     customCountryInput.style.display = "block";
   } else {
