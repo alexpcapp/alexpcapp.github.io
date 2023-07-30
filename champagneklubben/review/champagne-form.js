@@ -49,7 +49,7 @@ countrySelect.addEventListener("change", () => {
     // If a specific country is selected, hide the custom country input field
     customCountryInput.style.display = "none";
     // Reset the custom country input field value to an empty string
-    customCountryInput.value = "";
+    //customCountryInput.value = "";
   }
 });
 
