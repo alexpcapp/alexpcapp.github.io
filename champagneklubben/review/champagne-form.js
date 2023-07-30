@@ -100,25 +100,25 @@ champagneForm.addEventListener("submit", async (e) => {
         category = selectedCategory;
       }
 
-    // --- Wine country --- //
+    // --- Wine country --- // 1
 
       // Get the selected country from the drop-down list
-      const selectedCountry = countrySelect.value;
+      //const selectedCountry = countrySelect.value;
 
       // Get the user's input from the custom country input field
-      const customCountry = customCountryInput.value.trim();
+      //const customCountry = customCountryInput.value.trim();
 
       // Check if the selected country is "addNewCountry"
-      if (selectedCountry === "other" && customCountry !== "") {
+      //if (selectedCountry === "other" && customCountry !== "") {
         // Use the custom country if "addNewCountry" is selected and the user provided input
         // (you can perform validation if needed)
 
         // Set the country variable to the custom country input
-        var country = customCountry;
-      } else {
+        //var country = customCountry;
+      //} else {
         // Use the selected country from the drop-down list
-        var country = selectedCountry;
-      }
+        //var country = selectedCountry;
+      //}
 
   
 
