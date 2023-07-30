@@ -12,6 +12,14 @@ header {
     text-align: center;
 }
 
+p {
+    font-weight: bold;
+}
+
+label {
+    font-weight: normal;
+}
+
 /* CSS to hide elements with the "hidden" class */
 .hidden {
     display: none;

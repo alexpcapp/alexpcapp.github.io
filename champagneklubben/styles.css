@@ -22,6 +22,10 @@ main {
     display: none;
 }
 
+label {
+    font-weight: normal;
+}
+
 form {
     max-width: 500px;
     margin: 0 auto;
@@ -41,7 +45,7 @@ form {
 }
 
 form label {
-    font-weight: bold;
+    font-weight: normal;
 }
 
 form input,

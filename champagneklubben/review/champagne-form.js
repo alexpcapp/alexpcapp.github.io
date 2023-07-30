@@ -35,6 +35,11 @@ categorySelect.addEventListener("change", () => {
   }
 });
 
+// Champagne-type (color)
+const typeSelect = document.getElementById("type");
+const newTypeInput = document.getElementById("newtype");
+
+
 // --- Wine country-dropdown --- //
   // Get references to the drop-down list and custom country input
   const countrySelect = document.getElementById("country");
@@ -81,7 +86,7 @@ champagneForm.addEventListener("submit", async (e) => {
 
     // --- Rating --- //
       // Get the selected rating from the dropdown menu
-      const ratingDropdown = parseInt(document.getElementById("rating").value);
+      //const ratingDropdown = parseInt(document.getElementById("rating").value);
 
     // --- Wine category --- // 2
       // Get the selected wine-category from the drop-down menu
@@ -143,6 +148,7 @@ champagneForm.addEventListener("submit", async (e) => {
   const champagneCategory = document.getElementById("category").value;
   const champagneCountry = document.getElementById("country").value;
   const champagneTaste = document.getElementById("taste").value;
+  const champagneType = document.getElementById("type").value;
   const rating = document.getElementById("rating").value;
   const comments = document.getElementById("comments").value;
 
@@ -153,6 +159,7 @@ champagneForm.addEventListener("submit", async (e) => {
     category: champagneCategory,
     country: champagneCountry,
     taste: champagneTaste,
+    type: champagneType,
     rating: parseInt(rating),
     comments: comments,
     userId: userId, // Include the user's UID in the review data

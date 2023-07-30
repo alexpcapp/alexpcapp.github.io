@@ -28,7 +28,7 @@
           <label for="champagneName">Navn på producent (f.eks. Moët og Dom Pérignon):</label>
           <input type="text" id="champagneName" name="champagneName" placeholder="Navn på champagne" required>
 
-          <label for="country">Country:</label>
+          <label for="country">Land:</label>
           <select name="country" id="country">
             <option value="france">France</option>
             <option value="spain">Spain</option>
@@ -43,7 +43,7 @@
 
           <!-- <input type="text" id = "newCountry" name="newCountry" placeholder="Enter new country"> -->
 
-          <label for="area">Area:</label>
+          <label for="area">Område:</label>
           <select name="area" id="area">
             <option value="alsace">Alsace</option>
             <option value="champagne">Champagne</option>
@@ -73,16 +73,25 @@
           <!-- Add an input element for users to input a new category -->
           <!-- <input type="text" id="newCategory" name="newCategory" class="hidden" placeholder="Enter new category">-->
 
+          <label for="type">Type:</label>
+          <select name="type" id="type">
+            <option value="white">Hvid</option>
+            <option value="rose">Rosé</option>
+            <option value="red">Rød</option>
+            <option value="orange">Orange</option>
+           
+          </select>
+
 
           <label for="taste">Taste: <br> (brut nature = most dry, doux = most sweet)</label>
           <select id="taste" name="taste">
-            <option value="brut-nature">Brut Nature</option>
+            <option value="brut-nature">Brut Nature (most dry)</option>
             <option value="extra-brut">Extra Brut</option>
             <option value="brut">Brut</option>
             <option value="extra-dry">Extra Dry</option>
             <option value="dry">Dry</option>
             <option value="demi-sec">Demi Sec</option>
-            <option value="doux">Doux</option>
+            <option value="doux">Doux (most sweet)</option>
           </select>
 
           
