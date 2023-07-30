@@ -20,7 +20,7 @@ const champagneForm = document.getElementById("champagneForm");
 const successMessage = document.getElementById("successMessage");
 const errorMessage = document.getElementById("errorMessage");
 
-// Champagne-category
+// Champagne-category 1
 const categorySelect = document.getElementById("category");
 const newCategoryInput = document.getElementById("newCategory");
 
@@ -83,7 +83,7 @@ champagneForm.addEventListener("submit", async (e) => {
       // Get the selected rating from the dropdown menu
       const ratingDropdown = parseInt(document.getElementById("rating").value);
 
-    // --- Wine category --- //
+    // --- Wine category --- // 2
       // Get the selected wine-category from the drop-down menu
       const selectedCategory = categorySelect.value;
       // Get the user's input from the new category input field
