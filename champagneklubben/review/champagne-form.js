@@ -87,7 +87,7 @@ champagneForm.addEventListener("submit", async (e) => {
       // Get the selected wine-category from the drop-down menu
       const selectedCategory = categorySelect.value;
       // Get the user's input from the new category input field
-      const newCategory = newCategoryInput.value.trim();
+      //const newCategory = newCategoryInput.value.trim();
 
       let category = "";
 
