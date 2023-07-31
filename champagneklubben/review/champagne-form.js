@@ -94,7 +94,7 @@ champagneForm.addEventListener("submit", async (e) => {
       // Get the user's input from the new category input field
       //const newCategory = newCategoryInput.value.trim();
 
-      let category = "";
+      //let category = "";
 
         // Handle the category selection
       if (selectedCategory === "other" && newCategory !== "") {
@@ -147,6 +147,7 @@ champagneForm.addEventListener("submit", async (e) => {
   const champagneName = document.getElementById("champagneName").value;
   const champagneCategory = document.getElementById("category").value;
   const champagneCountry = document.getElementById("country").value;
+  const champagneArea = document.getElementById("area").value;
   const champagneTaste = document.getElementById("taste").value;
   const champagneType = document.getElementById("type").value;
   const rating = document.getElementById("rating").value;
@@ -158,6 +159,7 @@ champagneForm.addEventListener("submit", async (e) => {
     name: champagneName,
     category: champagneCategory,
     country: champagneCountry,
+    area: champagneArea,
     taste: champagneTaste,
     type: champagneType,
     rating: parseInt(rating),
