@@ -90,20 +90,20 @@ champagneForm.addEventListener("submit", async (e) => {
 
     // --- Wine category --- // 2
       // Get the selected wine-category from the drop-down menu
-      const selectedCategory = categorySelect.value;
+      //const selectedCategory = categorySelect.value;
       // Get the user's input from the new category input field
       //const newCategory = newCategoryInput.value.trim();
 
       //let category = "";
 
         // Handle the category selection
-      if (selectedCategory === "other" && newCategory !== "") {
+      //if (selectedCategory === "other" && newCategory !== "") {
         // Use the new category if "Add New Category" is selected and the user provided input
-      category = newCategory;
-      } else if (selectedCategory !== "other") {
+      //category = newCategory;
+      //} else if (selectedCategory !== "other") {
         // Use the selected category from the drop-down list
-        category = selectedCategory;
-      }
+      //  category = selectedCategory;
+      //}
 
     // --- Wine country --- // 1
 
