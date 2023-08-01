@@ -139,6 +139,8 @@ champagneForm.addEventListener("submit", async (e) => {
   // Get the user's UID
   const userId = user.uid;
 
+  const userName = auth.currentUser.displayName || "Unknown User";
+
   // Get the form input values
     // --- Date ---//
     // Get the current date and time
@@ -164,6 +166,7 @@ champagneForm.addEventListener("submit", async (e) => {
     type: champagneType,
     rating: parseInt(rating),
     comments: comments,
+    userName: userName,
     userId: userId, // Include the user's UID in the review data
   };
 
