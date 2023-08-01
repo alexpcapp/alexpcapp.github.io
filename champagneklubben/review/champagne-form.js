@@ -139,7 +139,7 @@ champagneForm.addEventListener("submit", async (e) => {
   // Get the user's UID
   const userId = user.uid;
 
-  const userName = auth.currentUser.displayName || "Unknown User";
+  const userName = user.displayName || "Unknown User";
 
   // Get the form input values
     // --- Date ---//
