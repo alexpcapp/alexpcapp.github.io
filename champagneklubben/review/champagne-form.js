@@ -139,7 +139,16 @@ champagneForm.addEventListener("submit", async (e) => {
   // Get the user's UID
   const userId = user.uid;
 
-  const userName = user.displayName || "Unknown User";
+  // Manually define the mapping of user IDs to user names
+  const userIdToNameMapping = {
+    "C5uZnkcvA2NBaTHWFvhIcU94eXQ2": "Milo Laris",
+    "L1XMC1it8jPTHvwxF1lfQ0BxjaB2": "Lui Larsen",
+    "qQNqfU2pqqRujPRRPbeSB7zntz73": "Jeppe Kaysen",
+    "j3Dd5qXtbraJehlJ68xDMo4nqk82": "Hjalmer Larsen",
+    "P4Pr6Tj5JRNFa2WjduFU7HS8hfT2": "Emil Bert",
+    "K04QIX6Jhvc0NxOrcKQ0ZpLjP0y2": "Alexander Cappelen",
+    // Add more entries for other users as needed
+  };
 
   // Get the form input values
     // --- Date ---//
@@ -166,7 +175,7 @@ champagneForm.addEventListener("submit", async (e) => {
     type: champagneType,
     rating: parseInt(rating),
     comments: comments,
-    userName: userName,
+    userName: userIdToNameMapping,
     userId: userId, // Include the user's UID in the review data
   };
 
