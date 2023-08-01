@@ -150,6 +150,8 @@ champagneForm.addEventListener("submit", async (e) => {
     // Add more entries for other users as needed
   };
 
+  const userName = userIdToNameMapping[userId];
+
   // Get the form input values
     // --- Date ---//
     // Get the current date and time
@@ -164,6 +166,7 @@ champagneForm.addEventListener("submit", async (e) => {
   const rating = document.getElementById("rating").value;
   const comments = document.getElementById("comments").value;
 
+
   // Create a new object to represent the champagne review
   const champagneReview = {
     date_review: dateSubmitted,
@@ -175,7 +178,7 @@ champagneForm.addEventListener("submit", async (e) => {
     type: champagneType,
     rating: parseInt(rating),
     comments: comments,
-    userName: userIdToNameMapping,
+    userName: userName,
     userId: userId, // Include the user's UID in the review data
   };
 
