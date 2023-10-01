@@ -4,6 +4,9 @@ function displayMap(mapName) {
     mapImage.src = `https://github.com/alexpcapp/parler-maps-europe/tree/main/maps/${mapName}.png`;
 }
 
+const mapSelector = document.getElementById("map-selector");
+
+
 mapSelector.addEventListener("change", function () {
     const selectedMap = mapSelector.value;
     displayMap(selectedMap);
