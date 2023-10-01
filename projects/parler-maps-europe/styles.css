@@ -6,11 +6,11 @@ body, h1, h2, p {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: rgb(37, 42, 50);
 }
 
 header {
-    background-color: #333;
+    background-color: rgb(37, 42, 50);
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -19,9 +19,10 @@ header {
 main {
     max-width: 1200px;
     margin: 20px auto;
+    margin-bottom: 20px;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(37, 42, 50);
+    
 }
 
 .map-container {
@@ -33,15 +34,37 @@ main {
     margin-top: 20px;
 }
 
+/* Style the footer */
 footer {
+    background-color: rgb(37, 42, 50);
+    color: white;
     text-align: center;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Limit the maximum width of the image */
+/* Center the image horizontally, limit its maximum width and maximum height */
 #map-image {
-    max-width: 100%; /* Adjust this value as needed */
-    height: auto;    /* Maintain the aspect ratio */
+    max-width: 50%;
+    max-height: 45%; /* Adjust this value as needed */
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+#map-display {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    max-height: 80vh;        /* Adjust this value as needed */
+    background-color: rgb(37, 42, 50); /* Set the background color */
+}
+
+.map-selector {
+    color: white; /* Replace with your desired text color code */
+    background-color: rgb(37, 42, 50);
 }
