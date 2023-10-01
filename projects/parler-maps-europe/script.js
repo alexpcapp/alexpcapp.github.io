@@ -3,19 +3,21 @@ function displayRandomMap() {
     const mapSelector = document.getElementById("map-selector");
     const randomIndex = Math.floor(Math.random() * mapSelector.options.length);
     const randomMapValue = mapSelector.options[randomIndex].value;
+
+    // Set the selected option in the dropdown
+    mapSelector.value = randomMapValue;
+
+    // Call the displayMap function to display the random map
     displayMap(randomMapValue);
 }
 
 // Call the displayRandomMap function when the page loads
 window.addEventListener("load", displayRandomMap);
 
-
+// Function to display the selected map
 function displayMap(mapName) {
-    // Update the src attribute of the <img> element to display the selected map
     const mapImage = document.getElementById("map-image");
-    //mapImage.src = `https://raw.githubusercontent.com/alexpcapp/parler-maps-europe/main/maps/${mapName}.png?raw=true`;
     mapImage.src = `maps/${mapName}.png`;
-
 }
 
 const mapSelector = document.getElementById("map-selector");
