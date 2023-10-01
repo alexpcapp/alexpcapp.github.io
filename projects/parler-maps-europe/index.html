@@ -14,7 +14,11 @@
         <section class="map-container">
             <h2>Map Display Area</h2>
             <!-- This is where the selected map will be displayed -->
-            <div id="map-display"></div>
+            <div id="map-display">
+                <h2>Map Display Area</h2>
+                <!-- This is where the selected map will be displayed -->
+                <img id="map-image" src="" alt="Selected Map">
+            </div>
         </section>
         <section class="map-selector">
             <h2>Choose a Map</h2>
@@ -29,7 +33,8 @@
     <footer>
         <p>&copy; 2023 Your Name</p>
     </footer>
-    <script>
+    <script src="script.js">
+
         const mapSelector = document.getElementById("map-selector");
         const mapDisplay = document.getElementById("map-display");
 
