@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Map</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Select a Map</h1>
+    </header>
+    <main>
+        <section class="map-container">
+            <h2>Map Display Area</h2>
+            <!-- This is where the selected map will be displayed -->
+            <div id="map-display"></div>
+        </section>
+        <section class="map-selector">
+            <h2>Choose a Map</h2>
+            <!-- Dropdown menu to select a map -->
+            <select id="map-selector">
+                <option value="map1">Map 1 - United Kingdom</option>
+                <option value="map2">Map 2 - France</option>
+                <!-- Add more options for your other maps -->
+            </select>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+    <script>
+        const mapSelector = document.getElementById("map-selector");
+        const mapDisplay = document.getElementById("map-display");
+
+        // Function to load and display the selected map (replace with your actual code)
+        function loadMap(mapName) {
+            // Load the map content based on the selected mapName
+            // Replace the content of the mapDisplay div with the map content
+            mapDisplay.innerHTML = `<iframe src="${mapName}.html" width="100%" height="500px"></iframe>`;
+        }
+
+        mapSelector.addEventListener("change", function () {
+            const selectedMap = mapSelector.value;
+            loadMap(selectedMap);
+        });
+    </script>
+</body>
+</html>
