@@ -62,6 +62,7 @@ footer {
     align-items: center;     /* Center vertically */
     max-height: 80vh;        /* Adjust this value as needed */
     background-color: rgb(37, 42, 50); /* Set the background color */
+    margin-top: -80px;
 }
 
 .map-selector {
