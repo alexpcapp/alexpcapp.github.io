@@ -40,22 +40,6 @@
     <footer>
         <p>&copy; 2023 Alexander Cappelen</p>
     </footer>
-    <script src="script.js">
-
-        const mapSelector = document.getElementById("map-selector");
-        const mapDisplay = document.getElementById("map-display");
-
-        // Function to load and display the selected map (replace with your actual code)
-        function loadMap(mapName) {
-            // Load the map content based on the selected mapName
-            // Replace the content of the mapDisplay div with the map content
-            mapDisplay.innerHTML = `<iframe src="${mapName}.html" width="100%" height="500px"></iframe>`;
-        }
-
-        mapSelector.addEventListener("change", function () {
-            const selectedMap = mapSelector.value;
-            loadMap(selectedMap);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
