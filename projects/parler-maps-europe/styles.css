@@ -75,4 +75,10 @@ footer {
     #map-display {
         margin-top: 60px; /* Adjust this value to move the maps further down on smaller screens */
     }
+
+    /* Increase the size of the maps on smaller screens */
+    #map-image {
+        max-width: 100%; /* Maintain responsiveness */
+        max-height: 60vh; /* Adjust this value for the desired size */
+    }
 }
