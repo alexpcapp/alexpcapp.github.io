@@ -69,3 +69,10 @@ footer {
     color: white; /* Replace with your desired text color code */
     background-color: rgb(37, 42, 50);
 }
+
+/* Styles for smaller screens (e.g., phones) */
+@media (max-width: 768px) {
+    #map-display {
+        margin-top: 60px; /* Adjust this value to move the maps further down on smaller screens */
+    }
+}
