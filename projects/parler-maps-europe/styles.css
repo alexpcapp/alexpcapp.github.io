@@ -68,6 +68,8 @@ footer {
 .map-selector {
     color: white; /* Replace with your desired text color code */
     background-color: rgb(37, 42, 50);
+    position: fixed;
+    right: 50px;
 }
 
 /* Styles for smaller screens (e.g., phones) */
