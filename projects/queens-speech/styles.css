@@ -49,6 +49,8 @@ header {
     margin-bottom: 10px;
     margin-top: 20px;
     position: relative;
+    text-decoration: none;
+    color: inherit;
 }
 
 .dropdown-content {
