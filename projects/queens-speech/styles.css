@@ -80,8 +80,25 @@ header {
 
 .analysis-content {
     /*height: 500px;*/
-    width: 90%;
+    align-items: center;
+    width: 100%;
+    text-align: center;
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.container-graph {
+    width: 100%; align-items: center;
+}
+
+.container-title {
+    font-size: 1em;
+    text-align: left;
+}
+
+p.container-text {
+    font-size: 0.7em;
+    font-weight: 400;
+    text-align: left;
 }
