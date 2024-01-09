@@ -1,5 +1,8 @@
 :root {
-    --royal-yellow: #fce486
+    --royal-yellow: #fce486;
+    --dark-yellow: #f5e069;
+    --dark-blue: #123281;
+    --light-blue: #4d94ef;
 }
 
 body {
@@ -8,25 +11,36 @@ body {
 }
 
 header {
-    background-color:  rgb(37, 42, 50);
+    background-color: var(--royal-yellow);
+}
+
+.intro-container {
+    width: 80%;
+    margin: 0 auto;
+    color: var(--dark-blue);
 }
 
 .top-bar {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--dark-yellow);
+    color: darkblue;
     padding: 10px;
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
     z-index: 1000;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+}
+
+.back-button {
+    margin-bottom: 10px;
 }
 
 .brand {
     font-size: 1.5em;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
 .dropdown {
@@ -40,6 +54,7 @@ header {
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    white-space: nowrap;
 }
 
 .dropdown:hover .dropdown-content {
@@ -56,4 +71,17 @@ header {
 /* Style the links inside the dropdown */
 .dropdown-content a:hover {
     background-color: #777;
+}
+
+.content-title {
+    color: var(--dark-blue);
+    font-weight: bolder;
+}
+
+.analysis-content {
+    /*height: 500px;*/
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
