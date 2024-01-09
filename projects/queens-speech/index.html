@@ -15,27 +15,30 @@
 </head>
 
 <body>
-    
     <div class="top-bar">
         <a href="../index.html" class="back-button">Back to Projects</a>
         <div class="brand">
-            <a href="index.html" style="text-decoration:none; color: var(--dark-blue);">The Queen's Speech</a></div>
+            <a href="index.html" style="text-decoration:none; color: var(--dark-blue);">The Queen's Speech</a>
+        </div>
+        <div class="dropdown">
+            <a href="data-collection/index.html" class="link-button">Data and Data Collection</a>
+        </div>
         <div class="dropdown">
             <span>Menu</span>
             <div class="dropdown-content">
                 <a href="#section1">Speech length over time</a>
                 <a href="#section2">Section 2</a>
                 <a href="#section3">Section 3</a>
-            </div>
+            </div> 
         </div>
-    </div>
-
-    <div class="intro-container">
-        <p>The Royal Danish Family have addressed the nation on New Year's Eve since 1941. Traditionally, the speech goes over important events during the year, regarding both the Denmark and the Royal Family itself. On New Year's Eve 2023, Queen Margrethe announced she would abdicate in the beginning of 2024, leaving the throne to her son. I have collected all New Year Speeches of Queen Margrethe II to a dataset. The intention for this site is to present interesting knowledge about the speeches.</p>
         
     </div>
-    
-    
+
+
+    <div class="intro-container">
+        <p>The Royal Danish Family have addressed the nation on New Year's Eve since 1941. Traditionally, the speech covers important events during the year, regarding both the Denmark and the Royal Family itself. On New Year's Eve 2023, Queen Margrethe announced she would abdicate in the beginning of 2024, leaving the throne to her son. I have collected all New Year Speeches of Queen Margrethe II to a dataset. The intention for this site is to present interesting knowledge about the speeches.</p>
+        
+    </div>
     <div class="container">
         <div id="section1" class="analysis-content">
             <div class="content-title">
@@ -47,18 +50,14 @@
                     Although the speech length varied from year to year, the general trend has been that the length of the speech increased over time. The first decade saw no speeches over 6000 characters long, while the last speech to be shorter than 6000 characters was in the 1980s. The longest 18 speeches were all written in the 21st century, with 2016 having the longest speech (9,818 characters) and 2004 being the second longest speech (9,549 characters).
                 </p>
             </div>
-
-            
             <div class="container-graph" >
                 <img src="graphs/margrethe-length-over-time.png" style="width: 100%;">
             </div>
         </div>
-        
         <!--
             <div id="section2" class="analysis-content">Section 2</div>
         <div id="section3" class="analysis-content">Section 3</div>
     -->
     </div>
-   
 </body>
 </html>

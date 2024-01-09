@@ -45,11 +45,16 @@ header {
 
 .dropdown {
     display: inline-block;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    position: relative;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
+    top: 100%;
     background-color: #555;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -109,4 +114,13 @@ header {
     font-weight: normal;
     text-align: left;
 
+}
+
+.link-button {
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: inherit;
 }
