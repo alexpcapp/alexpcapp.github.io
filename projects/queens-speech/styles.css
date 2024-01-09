@@ -101,3 +101,9 @@ p.container-text {
     font-size: 0.7em;
     text-align: left;
 }
+
+.normal-text {
+    font-weight: normal;
+    text-align: left;
+    font-size: .7em;
+}
