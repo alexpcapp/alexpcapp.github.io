@@ -7,11 +7,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--royal-yellow) ;
+    background-color: var(--dark-yellow) ;
+    margin: 0;
 }
 
+
+
 header {
-    background-color: var(--royal-yellow);
+    background-color: var(--dark-yellow);
 }
 
 .intro-container {
@@ -34,7 +37,10 @@ header {
 }
 
 .back-button {
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 5vh; /* Use the full viewport height */
 }
 
 .brand {
@@ -43,9 +49,9 @@ header {
     margin-bottom: 15px;
 }
 
-.dropdown {
+
+menu {
     display: inline-block;
-    margin-right: 40px;
     margin-bottom: 10px;
     margin-top: 20px;
     position: relative;
@@ -53,12 +59,51 @@ header {
     color: inherit;
 }
 
+.menu a {
+    display: inline-block; /* or use inline */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    filter: brightness(95%); /* Make the button color darker */
+}
+
+.menu a:hover {
+    box-shadow:  rgba(0,0,0,0.3); /* Slightly larger shadow on hover */
+    background-color: var(--dark-yellow) /* Slightly darker background on hover */
+}
+
+.dropdown {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: inline-block; /* or use inline */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow:  rgba(0,0,0,0.3); /* Slightly larger shadow on hover */
+}
+
+.dropdown a {
+    display: inline-block; /* or use inline */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.dropdown a:hover {
+    box-shadow:  rgba(0,0,0,0.3); /* Slightly larger shadow on hover */
+    /* background-color: var(--dark-yellow) /* Slightly darker background on hover */
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
-    background-color: #555;
-    min-width: 160px;
+    background-color: #555555;
+    min-width: 16px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     white-space: nowrap;
@@ -73,11 +118,6 @@ header {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-}
-
-/* Style the links inside the dropdown */
-.dropdown-content a:hover {
-    background-color: #777;
 }
 
 .content-title {
@@ -123,6 +163,17 @@ header {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    color: inherit;
+}
+
+content-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 10px;
+}
+
+
+.download-button {
     text-decoration: none;
     color: inherit;
 }
