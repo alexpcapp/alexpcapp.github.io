@@ -7,11 +7,11 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--royal-yellow) ;
+    background-color: var(--dark-yellow) ;
 }
 
 header {
-    background-color: var(--royal-yellow);
+    background-color: var(--dark-yellow);
 }
 
 .intro-container {
