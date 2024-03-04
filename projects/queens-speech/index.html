@@ -58,11 +58,27 @@
             <div class="container-graph" >
                 <img src="graphs/margrethe-length-over-time.png" style="width: 100%;">
             </div>
+            <p>Next, I take a closer look into the content of the speeches by assessing the sentiment over time.</p>
         </div>
         <!--
             <div id="section2" class="analysis-content">Section 2</div>
         <div id="section3" class="analysis-content">Section 3</div>
     -->
+    </div>
+
+    <div class="container">
+        <div id="section2" class="analysis-content">
+            <div class="content-title">
+                <h1 class="container-title">Sentiment of speeches over time</h1>
+                <p class="normal-text">Using NLP modules, I split all speeches into individual sentences and automatically label whether the sentences are positive, negative, or neutral. I then aggregate the sentences to the speech level in order to find out how much of each speech is positive, negative, or neutral. These steps are repeated for each speech, which makes it possible to compare the speeches over time. This is shown in the plot below.</p>
+            </div>
+            <div class="container-graph">
+                <img src="graphs/sentiment_over_time.png" style="width:100%;" class="container-graph">
+            </div>
+
+            <p>The plot shows how the Queen initially was more hesitant to use negative rhetoric in her speeches. However, after about 5 years, the speeches began to be fairly evenly distributed between the positive, the negative, and the neutral. It was not until the late 80s that this changed. Now the neutral content began to come out on top of each speech, while the positive and negative sentiment varied from year to year, although the positive tended to outweight the negative. Around the new millenium, the positive sentiment started to increase steadily, while the negative declined. From here on, the Queen used about 20% of her speeches for negative sentences, while the positive and neutral sentiment varied around the 40% mark each year. Nevertheless, the positive and neutral still battled each other for dominance as some year saw the positive sentiment slightly outweighing the neutral, and some years saw the neutral tone come out as a clear winner.</p>
+
+        </div>
     </div>
 </body>
 </html>
