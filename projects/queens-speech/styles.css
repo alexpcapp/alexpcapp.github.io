@@ -177,3 +177,9 @@ content-container {
     text-decoration: none;
     color: inherit;
 }
+
+normal-text {
+    font-weight: normal;
+    text-align: left;
+    color: var(--dark-blue);
+}
