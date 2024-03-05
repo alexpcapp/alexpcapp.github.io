@@ -127,6 +127,8 @@ menu {
 
 .container {
     margin-top: 100px;
+    margin-bottom: 50px;
+
 }
 
 .analysis-content {
@@ -166,7 +168,7 @@ menu {
     color: inherit;
 }
 
-content-container {
+.content-container {
     display: flex;
     justify-content: center; /* Center horizontally */
     margin-bottom: 10px;
