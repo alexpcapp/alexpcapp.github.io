@@ -152,10 +152,10 @@ menu {
     text-align: left;
 }
 
-normal-text {
+.normal-text {
     font-weight: normal;
     text-align: left;
-
+    color: var(--dark-blue);
 }
 
 .link-button {
