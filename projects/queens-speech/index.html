@@ -1,103 +1,137 @@
-<!DOCTYPE html>
-<html lang=""><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE HTML>
+<!--
+	Highlights by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Highlights by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script src="script.js"></script>
 
-    <title>The Queen's Speech</title>
-    <meta name="description" content="Alexander Cappelen&#39;s personal website">
-    <meta name="author" content="The Queens Speech">
+	</head>
+	<body class="is-preload">
 
-    <link rel="stylesheet" href="../queens-speech/styles.css">
-    <!-- <link rel="stylesheet" href="../queens-speech/styles.css"> -->
+		<!-- Header -->
+		<header class="logo-bar">
+			<img src="images/monogram-margrethe.png" class="monogram-logo">
+		</header>
 
-    <!-- <base href="https://alexpcapp.github.io/">-->
-    
-        <link rel="icon" type="image/ico" href="https://alexpcapp.github.io/">
-    
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
+			<section id="header">
+				<header class="major">
+					<h1>The <span class="gradient-text">Queen's</span> Speech</h1>
+					<p>By <a href="https://alexpcapp.github.io">Alexander Cappelen</a></p>
+					<p>Analysing the New Year's speeches of Queen Margrethe II of Denmark</p>
 
+					<div class="slider">
+						<div class="slide-track">
+						<!-- Duplicate the image set to create a seamless loop -->
+						<div class="slide"><img src="images/image-aalborg-stift.jpeg" alt="Image 01" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-johannes-jansson.jpeg" alt="Image 02" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-news-oresund.jpeg" alt="Image 03" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-public-domain.jpeg" alt="Image 04" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-public-domain2.jpeg" alt="Image 05" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-public-domain3.jpeg" alt="Image 06" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-skagen.jpeg" alt="Image 07" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-varde-kommune2.jpeg" alt="Image 08" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-varde3.jpeg" alt=" Image 09" class="black-and-white"></div>
+						<div class="slide"><img src="images/image_varde-kommune.jpeg" alt="Image 010" class="black-and-white"></div>
+				
+						<!-- Repeat images for seamless transition -->
+						
+						<div class="slide"><img src="images/image-aalborg-stift.jpeg" alt="Image 11" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-johannes-jansson.jpeg" alt="Image 12" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-news-oresund.jpeg" alt="Image 13" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-public-domain.jpeg" alt="Image 14" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-public-domain2.jpeg" alt="Image 15" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-public-domain3.jpeg" alt="Image 16" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-skagen.jpeg" alt="Image 17" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-varde-kommune2.jpeg" alt="Image 18" class="black-and-white"></div>
+						<div class="slide"><img src="images/image-varde3.jpeg" alt="Image 19" class="black-and-white"></div>
+						<div class="slide"><img src="images/image_varde-kommune.jpeg" alt="Image 110" class="black-and-white"></div>
+					</div>
+				</header>
+			</section>
 
-    
-</head>
+		<!-- One -->
+			<section id="one" class="main special">
+				<div class="container">
+					
+						<header class="major">
+							<h2>The New Year Address</h2>
+						</header>
+						<p class="regular-text">It is customary that the Monarch of Denmark addresses the nation on New Year's Eve. The speech covers important events during the year, regarding both the Denmark and the Royal Family itself. On New Year's Eve 2023, Queen Margrethe announced she would abdicate in the beginning of 2024, leaving the throne to her son. I have collected all New Year Speeches of Queen Margrethe II to a dataset. On this site, I present my findings from analysing the New Year's Eve speeches of Queen Margrethe II.</p>
 
-<body>
-    <div class="top-bar">
-        <a href="../index.html" class="back-button">Back to Projects</a>
-        <div class="brand">
-            <a href="index.html" style="text-decoration:none; color: var(--dark-blue);">The Queen's Speech</a>
-        </div>
+						<p class="regular-text">All New Year speeches by Queen Margrethe II are available in Danish from <a href="https://www.dansketaler.dk/taler/margrethe-2-hkh-dronning" style=" text-decoration: none;color: inherit;">www.dansketaler.dk</a>. With Python I scrape the speeches and organise them into a structured dataset after removing HTML tags and formatting the text (removing /n, ensuring whitespace after period, and so on).
+						</p>
+					</div>
+				</div>
+			</section>
 
-        <div class="menu">
-            <a href="data-collection/index.html" class="link-button">Data Collection</a>
+		<!-- Two -->
+			<section id="two" class="main special">
+				<div class="container">
+					
+					<div class="content">
+						<header class="major">
+							<h2>Speech Length</h2>
+						</header>
+						<p class="regular-text">The first element I cover is the length of the speeches in number of characters. Although the speech length varied from year to year, the general trend has been that the length of the speech increased over time. The first decade saw no speeches over 6000 characters long, while the last speech to be shorter than 6000 characters was in the 1980s. The longest 18 speeches were all written in the 21st century, with 2016 having the longest speech (9,818 characters) and 2004 being the second longest speech (9,549 characters).</p>
 
-            <a href="download-data/speeches_margrethe_DA.csv" download="speeches_margrethe_DA.csv" class="download-button">Download data</a>
+						<div style="margin: 0 auto;">
+							<canvas id="speech_length"></canvas>
+						</div>
+						
+					</div>
+				</div>
+			</section>
 
-            <div class="dropdown">
-            <span>Results</span>
-                <div class="dropdown-content">
-                    <a href="#section1">Speech length over time</a>
-                    <a href="#section2">Sentiment analysis</a>
-                    <a href="#section3"></a>
-                </div> 
-            </div>
-        </div>
-    </div>
+		<!-- Three -->
+			<section id="three" class="main special">
+				<div class="container">
+					<div class="content">
+						<header class="major">
+							<h2>Sentiment Analysis</h2>
+						</header>
+						<p class="regular-text">I preprocess the data using Python. Most natural language processing packages are best suited for shorter pieces of text, for example what is found on social media. As a result, these packages are not able to analyze a long text such as a speech. With the <code>nltk</code> module I split all speeches into individual sentences in order to classify the speeches. Using the <code >senda</code> package <a href="https://github.com/ebanalyse/senda">developed by Ekstra-Bladet</a> each sentence is labelled as either positive, negative, or neutral. I then aggregate the sentences to the speech level in order to find out how much of each speech is positive, negative, or neutral. These steps are repeated for each speech, which makes it possible to compare the speeches over time. This results in three measures for each speech, which is the percentage of the speech that is positive, negative, and neutral. This is shown in the plot below.</p>
 
+						<div style="margin: 0 auto;">
+							<canvas id="sentiment_over_time"></canvas>
+						</div>
 
-    <div class="intro-container">
-        <p>The Royal Danish Family have addressed the nation on New Year's Eve since 1941. Traditionally, the speech covers important events during the year, regarding both the Denmark and the Royal Family itself. On New Year's Eve 2023, Queen Margrethe announced she would abdicate in the beginning of 2024, leaving the throne to her son. I have collected all New Year Speeches of Queen Margrethe II to a dataset. The intention for this site is to present interesting knowledge about the speeches.</p>
-        
-    </div>
-    <div class="container">
-        <div id="section1" class="analysis-content">
-            <div class="content-title">
-                <h1 class="container-title">Speech length over time</h1>
-                <p class="normal-text">
-                    The speech length of each New Year Speech is shown in the graph below.
-                </p>
-                <p class="normal-text">
-                    Although the speech length varied from year to year, the general trend has been that the length of the speech increased over time. The first decade saw no speeches over 6000 characters long, while the last speech to be shorter than 6000 characters was in the 1980s. The longest 18 speeches were all written in the 21st century, with 2016 having the longest speech (9,818 characters) and 2004 being the second longest speech (9,549 characters).
-                </p>
-            </div>
-            <div style="width: 100%; max-width: 600px; height: 400px; margin: 0 auto;">
-                <img src="graphs/margrethe-length-over-time.png" style="width: 100%;">
-            </div>
-        </div>
-        <!--
-            <div id="section2" class="analysis-content">Section 2</div>
-        <div id="section3" class="analysis-content">Section 3</div>
-    -->
-    </div>
-    
-    <div class="container">
-        <div id="section2" class="analysis-content">
-            <div class="content-title">
-                <h1 class="container-title">Sentiment of speeches over time</h1>
-                <p class="normal-text">Using NLP modules, I split all speeches into individual sentences and automatically label whether the sentences are positive, negative, or neutral. I then aggregate the sentences to the speech level in order to find out how much of each speech is positive, negative, or neutral. These steps are repeated for each speech, which makes it possible to compare the speeches over time. This is shown in the plot below.</p>
-            </div>
-            <!-- 
-            <div class="container-graph">
-                <img src="graphs/sentiment_over_time.png" style="width:100%;" class="container-graph">
-            </div>
-            -->
+						<p class="regular-text">The plot shows the percentage of each sentiment category in each speech. The results indicate the Queen initially was more hesitant to use negative rhetoric in her speeches. However, after about 5 years, the speeches began to be fairly evenly distributed between the positive, the negative, and the neutral. It was not until the late 80s that this changed. Now the neutral content began to come out on top of each speech, while the positive and negative sentiment varied from year to year, although the positive tended to outweight the negative. Around the new millenium, the positive sentiment started to increase steadily, while the negative declined. From here on, the Queen used about 20% of her speeches for negative sentences, while the positive and neutral sentiment varied around the 40% mark each year. Nevertheless, the positive and neutral still battled each other for dominance as some year saw the positive sentiment slightly outweighing the neutral, and some years saw the neutral tone come out as a clear winner.</p>
+					</div>
+				</div>
+			</section>
 
-                <div style="width: 100%; max-width: 600px; height: 400px; margin: 0 auto;">
-                    <canvas id="myChart"></canvas>
-                </div>
+		
 
-            <p class="normal-text">The plot shows how the Queen initially was more hesitant to use negative rhetoric in her speeches. However, after about 5 years, the speeches began to be fairly evenly distributed between the positive, the negative, and the neutral. It was not until the late 80s that this changed. Now the neutral content began to come out on top of each speech, while the positive and negative sentiment varied from year to year, although the positive tended to outweight the negative. Around the new millenium, the positive sentiment started to increase steadily, while the negative declined. From here on, the Queen used about 20% of her speeches for negative sentences, while the positive and neutral sentiment varied around the 40% mark each year. Nevertheless, the positive and neutral still battled each other for dominance as some year saw the positive sentiment slightly outweighing the neutral, and some years saw the neutral tone come out as a clear winner.</p>
+		<!-- Footer -->
+			<section id="footer">
+				
+				<footer>
+					<ul class="icons">
+						<li><a href="https://alexpcapp.github.io" class="icon brands alt fa-github"><span class="label">Twitter</span></a></li>
+						<li><a href="alexander.cappelen@hotmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Demo Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</footer>
+			</section>
 
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-        </div>
-
-
-    </div>
-
-
-    <!-- <script src="download-data/sentiment_by_year.json"></script> -->
-
-
-
-</body>
+	</body>
 </html>

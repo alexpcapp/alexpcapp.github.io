@@ -1,5 +1,82 @@
 
 // script.js
+async function fetchDataAndCreateChart() {
+    try {
+        // Adjust the path to where your actual JSON file is located
+        const response = await fetch('download-data/speech_length_by_year.json');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const jsonData = await response.json();
+
+        // Assuming jsonData is an array of objects with 'year' and 'characters' properties
+        const years = jsonData.map(data => data.year);
+        const characterCounts = jsonData.map(data => data.num_characters);
+
+        // Create the chart
+        const ctx = document.getElementById('speech_length').getContext('2d');
+
+        Chart.defaults.font.color = '#152E93';
+
+        const speechLengthChart = new Chart(ctx, {
+            type: 'line',  // This example uses a line chart
+            data: {
+                labels: years,  // x-axis labels
+                datasets: [{
+                    label: 'Speech Length (Characters)',
+                    data: characterCounts,  // y-axis data
+                    fill: true,
+                    borderColor: '#152E93',
+                    borderWidth: 1,
+                    pointRadius: 0,
+                    tension: 0.5  // Adds some curve between points
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Characters',
+                            color: '#152E93',
+                        },
+                        ticks: {
+                            color: '#152E93',
+                            callback: function(value, index, values) {
+                                // Assuming the value is a number, format it with commas
+                                return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                            },
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            color: '#152E93',
+                        },
+                        ticks: {
+                            color: '#152E93',
+                        },
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: true
+            }
+        });
+    } catch (error) {
+        console.error('Failed to fetch the data:', error);
+    }
+}
+
+// Call the function to fetch data and create the chart
+fetchDataAndCreateChart();
+
 document.addEventListener("DOMContentLoaded", function() {
     fetch('download-data/sentiment_by_year.json') // Adjust the path to your JSON file as necessary
     .then(response => response.json())
@@ -19,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
       // After organizing the data, create the chart
-        const ctx = document.getElementById('myChart').getContext('2d');
+        const ctx = document.getElementById('sentiment_over_time').getContext('2d');
         const myChart = new Chart(ctx, {
             type: 'line',
             data: {
@@ -30,21 +107,24 @@ document.addEventListener("DOMContentLoaded", function() {
                         data: dataByLabel.positive,
                         borderColor: 'rgba(75, 192, 192, 1)',
                         borderWidth: 1,
-                        pointRadius: 0
+                        pointRadius: 0,
+                        tension: 0.3 
                     },
                     {
                         label: 'Negative',
                         data: dataByLabel.negative,
                         borderColor: 'rgba(255, 99, 132, 1)',
                         borderWidth: 1,
-                        pointRadius: 0
+                        pointRadius: 0,
+                        tension: 0.3
                     },
                     {
                         label: 'Neutral',
                         data: dataByLabel.neutral,
                         borderColor: 'rgba(153, 102, 255, 1)',
                         borderWidth: 1,
-                        pointRadius: 0
+                        pointRadius: 0,
+                        tension: 0.3
                     }
                 ]
             },
@@ -56,9 +136,22 @@ document.addEventListener("DOMContentLoaded", function() {
                         max: 100,
                         title: {
                             display: true,
-                            text: "Percentage"
+                            text: "Percentage",
+                            color: '#152E93'
+                        },
+                        ticks: {
+                            color: '#152E93'
                         }
                     }, 
+                    x: {
+                        title: {
+                            display: true,
+                            color: '#152E93'
+                        },
+                        ticks: {
+                            color: '#152E93'
+                        }
+                    }
                 },
                 interaction: {
                     mode: 'point', // Consider the nearest item (single point) only
