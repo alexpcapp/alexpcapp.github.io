@@ -1,5 +1,5 @@
 
-// script.js
+// script.js 
 async function fetchDataAndCreateChart() {
     try {
         // Adjust the path to where your actual JSON file is located
