@@ -3,7 +3,7 @@
 async function fetchDataAndCreateChart() {
     try {
         // Adjust the path to where your actual JSON file is located
-        const response = await fetch('../download-data/speech_length_by_year.json');
+        const response = await fetch('download-data/speech_length_by_year.json');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -78,7 +78,7 @@ async function fetchDataAndCreateChart() {
 fetchDataAndCreateChart();
 
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('../download-data/sentiment_by_year.json') // Adjust the path to your JSON file as necessary
+    fetch('download-data/sentiment_by_year.json') // Adjust the path to your JSON file as necessary
     .then(response => response.json())
     .then(dataSet => {
         const labels = [...new Set(dataSet.map(data => data.year))];
