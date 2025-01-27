@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>The Monarch's Speech</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../script.js"></script>
+    </head>
+
+    <body class="is-preload">
+
+        <div class="container">
+            <button onclick="window.location.href='../index.html';" class="home-btn">Home</button>
+        </div>
+
+        <header class="logo-bar">
+            <!-- <img src="../images/monogram-margrethe.png" class="monogram-logo"> -->
+            <button onclick="window.location.href='../index.html';" >
+                <img src="../images/logo-kongehus.svg" alt="Logo of the Danish Royal Family" class="monogram-logo" width="125" />
+            </button>
+        </header>
+
+        <section id="header">
+            <header class="major">
+                <h1>Analysing <br> The <span class="gradient-text">Royal</span> Speeches</h1>
+            </header>
+        </section>
+
+    
+
+
+
+    <div style="height: 200px;"></div>
+
+
+
+    <!-- Queen Margrethe Section -->
+    <div class="speaker-section" id="queen-margrethe">
+        <div class="image-container">
+            <img src="../images/monogram-margrethe.png" class="small-queen-logo" > 
+        </div>
+        
+        <h2 style="text-align: center;"> Queen Margrethe - Overview  </h2>
+            <p>A quick summary of the Queen's speeches, highlighting key moments and trends over the years.</p>
+
+            <div style="margin: 0 auto;">
+                <canvas id="sentiment_over_time('margrethe')"></canvas>
+                <script src="../script.js"></script>
+            </div>
+
+            <div style="margin: 0 auto;">
+                <h3>Margrethe Sentiment Over Time</h3>
+                <canvas id="sentiment_margrethe"></canvas>
+            </div>
+        <a href="queen-margrethe-details.html" class="button-link">Read More about Queen Margrethe</a>
+    </div>
+
+    <!-- King Frederik Section -->
+    <div class="speaker-section" id="king-frederik">
+        <div class="image-container">
+            <img src="../images/monogram-margrethe.png" class="small-queen-logo" > 
+        </div>
+        <h2 style="text-align: center;">King Frederik - Overview</h2>
+        <p>An introduction to King Frederik’s speeches, starting with his first New Year’s speech this year.</p>
+        <a href="king-frederik-details.html" class="button-link">Read More about King Frederik</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <section id="footer">
+            <footer>
+                <ul class="icons">
+                    <li><a href="https://alexpcapp.github.io" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="mailto:alexander.cappelen@hotmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Demo Images: <a href="http://unsplash.com">Unsplash</a></li>
+                </ul>
+            </footer>
+        </section>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

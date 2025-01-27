@@ -8,11 +8,16 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="script.js"></script>
     </head>
+	
     <body class="is-preload">
 
         <!-- Header -->
         <header class="logo-bar">
-            <img src="images/monogram-margrethe.png" class="monogram-logo">
+            <!-- <img src="images/monogram-margrethe.png" class="monogram-logo"> -->
+			<button onclick="window.location.href='index.html';" >
+                <img src="images/logo-kongehus.svg" alt="Logo of the Danish Royal Family" class="monogram-logo" width="125" />
+            </button>
+
         </header>
 
         <section id="header">
@@ -26,11 +31,12 @@
 		<nav class="navbar">
 			<ul class="menu">
 				<li class="dropdown">
-					<a href="#">Analysis</a>
-					<ul class="dropdown-content">
+					<a href="analysis/index.html">Analysis</a>
+					<!-- <ul class="dropdown-content">
 						<li><a href="analysis/queen-margrethe.html">Queen Margrethe</a></li>
 						<li><a href="#">King Frederik</a></li>
-					</ul>
+					</ul> 
+				-->
 				</li>
 				<li><a href="speeches.html">Speeches</a></li>
 				<li><a href="about.html">Project Description</a></li>
@@ -38,6 +44,11 @@
 		</nav>
 
     <!-- Navigation -->
+	<div style="margin: 0 auto;">
+		<canvas id="speech_length"></canvas>
+		<script src="script.js"></script>
+	</div>
+	
 	
 
         <!-- Main content sections here -->

@@ -1,0 +1,782 @@
+[
+    {
+        "year": 1972,
+        "label": "neutral",
+        "percentage": 51.6129032258
+    },
+    {
+        "year": 1972,
+        "label": "positiv",
+        "percentage": 45.1612903226
+    },
+    {
+        "year": 1972,
+        "label": "negativ",
+        "percentage": 3.2258064516
+    },
+    {
+        "year": 1973,
+        "label": "neutral",
+        "percentage": 54.2857142857
+    },
+    {
+        "year": 1973,
+        "label": "positiv",
+        "percentage": 37.1428571429
+    },
+    {
+        "year": 1973,
+        "label": "negativ",
+        "percentage": 8.5714285714
+    },
+    {
+        "year": 1974,
+        "label": "positiv",
+        "percentage": 40.0
+    },
+    {
+        "year": 1974,
+        "label": "neutral",
+        "percentage": 36.6666666667
+    },
+    {
+        "year": 1974,
+        "label": "negativ",
+        "percentage": 23.3333333333
+    },
+    {
+        "year": 1975,
+        "label": "positiv",
+        "percentage": 47.3684210526
+    },
+    {
+        "year": 1975,
+        "label": "neutral",
+        "percentage": 36.8421052632
+    },
+    {
+        "year": 1975,
+        "label": "negativ",
+        "percentage": 15.7894736842
+    },
+    {
+        "year": 1976,
+        "label": "positiv",
+        "percentage": 44.1176470588
+    },
+    {
+        "year": 1976,
+        "label": "neutral",
+        "percentage": 32.3529411765
+    },
+    {
+        "year": 1976,
+        "label": "negativ",
+        "percentage": 23.5294117647
+    },
+    {
+        "year": 1977,
+        "label": "neutral",
+        "percentage": 36.3636363636
+    },
+    {
+        "year": 1977,
+        "label": "positiv",
+        "percentage": 33.3333333333
+    },
+    {
+        "year": 1977,
+        "label": "negativ",
+        "percentage": 30.303030303
+    },
+    {
+        "year": 1978,
+        "label": "positiv",
+        "percentage": 51.1111111111
+    },
+    {
+        "year": 1978,
+        "label": "neutral",
+        "percentage": 28.8888888889
+    },
+    {
+        "year": 1978,
+        "label": "negativ",
+        "percentage": 20.0
+    },
+    {
+        "year": 1979,
+        "label": "negativ",
+        "percentage": 34.2105263158
+    },
+    {
+        "year": 1979,
+        "label": "positiv",
+        "percentage": 34.2105263158
+    },
+    {
+        "year": 1979,
+        "label": "neutral",
+        "percentage": 31.5789473684
+    },
+    {
+        "year": 1980,
+        "label": "negativ",
+        "percentage": 40.0
+    },
+    {
+        "year": 1980,
+        "label": "positiv",
+        "percentage": 31.4285714286
+    },
+    {
+        "year": 1980,
+        "label": "neutral",
+        "percentage": 28.5714285714
+    },
+    {
+        "year": 1981,
+        "label": "neutral",
+        "percentage": 41.1764705882
+    },
+    {
+        "year": 1981,
+        "label": "positiv",
+        "percentage": 32.3529411765
+    },
+    {
+        "year": 1981,
+        "label": "negativ",
+        "percentage": 26.4705882353
+    },
+    {
+        "year": 1982,
+        "label": "negativ",
+        "percentage": 38.0
+    },
+    {
+        "year": 1982,
+        "label": "neutral",
+        "percentage": 36.0
+    },
+    {
+        "year": 1982,
+        "label": "positiv",
+        "percentage": 26.0
+    },
+    {
+        "year": 1983,
+        "label": "positiv",
+        "percentage": 42.8571428571
+    },
+    {
+        "year": 1983,
+        "label": "neutral",
+        "percentage": 33.3333333333
+    },
+    {
+        "year": 1983,
+        "label": "negativ",
+        "percentage": 23.8095238095
+    },
+    {
+        "year": 1984,
+        "label": "negativ",
+        "percentage": 41.8604651163
+    },
+    {
+        "year": 1984,
+        "label": "neutral",
+        "percentage": 34.8837209302
+    },
+    {
+        "year": 1984,
+        "label": "positiv",
+        "percentage": 23.2558139535
+    },
+    {
+        "year": 1985,
+        "label": "positiv",
+        "percentage": 50.0
+    },
+    {
+        "year": 1985,
+        "label": "neutral",
+        "percentage": 28.2608695652
+    },
+    {
+        "year": 1985,
+        "label": "negativ",
+        "percentage": 21.7391304348
+    },
+    {
+        "year": 1986,
+        "label": "neutral",
+        "percentage": 47.3684210526
+    },
+    {
+        "year": 1986,
+        "label": "negativ",
+        "percentage": 28.0701754386
+    },
+    {
+        "year": 1986,
+        "label": "positiv",
+        "percentage": 24.5614035088
+    },
+    {
+        "year": 1987,
+        "label": "neutral",
+        "percentage": 50.0
+    },
+    {
+        "year": 1987,
+        "label": "positiv",
+        "percentage": 26.5625
+    },
+    {
+        "year": 1987,
+        "label": "negativ",
+        "percentage": 23.4375
+    },
+    {
+        "year": 1988,
+        "label": "neutral",
+        "percentage": 37.7358490566
+    },
+    {
+        "year": 1988,
+        "label": "negativ",
+        "percentage": 33.9622641509
+    },
+    {
+        "year": 1988,
+        "label": "positiv",
+        "percentage": 28.3018867925
+    },
+    {
+        "year": 1989,
+        "label": "neutral",
+        "percentage": 43.2835820896
+    },
+    {
+        "year": 1989,
+        "label": "positiv",
+        "percentage": 34.328358209
+    },
+    {
+        "year": 1989,
+        "label": "negativ",
+        "percentage": 22.3880597015
+    },
+    {
+        "year": 1990,
+        "label": "neutral",
+        "percentage": 43.3333333333
+    },
+    {
+        "year": 1990,
+        "label": "positiv",
+        "percentage": 35.0
+    },
+    {
+        "year": 1990,
+        "label": "negativ",
+        "percentage": 21.6666666667
+    },
+    {
+        "year": 1991,
+        "label": "neutral",
+        "percentage": 51.3888888889
+    },
+    {
+        "year": 1991,
+        "label": "positiv",
+        "percentage": 29.1666666667
+    },
+    {
+        "year": 1991,
+        "label": "negativ",
+        "percentage": 19.4444444444
+    },
+    {
+        "year": 1992,
+        "label": "neutral",
+        "percentage": 37.7358490566
+    },
+    {
+        "year": 1992,
+        "label": "negativ",
+        "percentage": 33.9622641509
+    },
+    {
+        "year": 1992,
+        "label": "positiv",
+        "percentage": 28.3018867925
+    },
+    {
+        "year": 1993,
+        "label": "neutral",
+        "percentage": 61.1111111111
+    },
+    {
+        "year": 1993,
+        "label": "positiv",
+        "percentage": 23.6111111111
+    },
+    {
+        "year": 1993,
+        "label": "negativ",
+        "percentage": 15.2777777778
+    },
+    {
+        "year": 1994,
+        "label": "neutral",
+        "percentage": 40.2777777778
+    },
+    {
+        "year": 1994,
+        "label": "positiv",
+        "percentage": 34.7222222222
+    },
+    {
+        "year": 1994,
+        "label": "negativ",
+        "percentage": 25.0
+    },
+    {
+        "year": 1995,
+        "label": "positiv",
+        "percentage": 40.7407407407
+    },
+    {
+        "year": 1995,
+        "label": "neutral",
+        "percentage": 35.1851851852
+    },
+    {
+        "year": 1995,
+        "label": "negativ",
+        "percentage": 24.0740740741
+    },
+    {
+        "year": 1996,
+        "label": "neutral",
+        "percentage": 45.0
+    },
+    {
+        "year": 1996,
+        "label": "negativ",
+        "percentage": 33.3333333333
+    },
+    {
+        "year": 1996,
+        "label": "positiv",
+        "percentage": 21.6666666667
+    },
+    {
+        "year": 1997,
+        "label": "neutral",
+        "percentage": 58.064516129
+    },
+    {
+        "year": 1997,
+        "label": "positiv",
+        "percentage": 32.2580645161
+    },
+    {
+        "year": 1997,
+        "label": "negativ",
+        "percentage": 9.6774193548
+    },
+    {
+        "year": 1998,
+        "label": "neutral",
+        "percentage": 50.0
+    },
+    {
+        "year": 1998,
+        "label": "positiv",
+        "percentage": 32.1428571429
+    },
+    {
+        "year": 1998,
+        "label": "negativ",
+        "percentage": 17.8571428571
+    },
+    {
+        "year": 1999,
+        "label": "neutral",
+        "percentage": 36.231884058
+    },
+    {
+        "year": 1999,
+        "label": "negativ",
+        "percentage": 34.7826086957
+    },
+    {
+        "year": 1999,
+        "label": "positiv",
+        "percentage": 28.9855072464
+    },
+    {
+        "year": 2000,
+        "label": "positiv",
+        "percentage": 46.1538461538
+    },
+    {
+        "year": 2000,
+        "label": "neutral",
+        "percentage": 38.4615384615
+    },
+    {
+        "year": 2000,
+        "label": "negativ",
+        "percentage": 15.3846153846
+    },
+    {
+        "year": 2001,
+        "label": "neutral",
+        "percentage": 47.3684210526
+    },
+    {
+        "year": 2001,
+        "label": "positiv",
+        "percentage": 31.5789473684
+    },
+    {
+        "year": 2001,
+        "label": "negativ",
+        "percentage": 21.0526315789
+    },
+    {
+        "year": 2002,
+        "label": "neutral",
+        "percentage": 59.1549295775
+    },
+    {
+        "year": 2002,
+        "label": "positiv",
+        "percentage": 29.5774647887
+    },
+    {
+        "year": 2002,
+        "label": "negativ",
+        "percentage": 11.2676056338
+    },
+    {
+        "year": 2003,
+        "label": "neutral",
+        "percentage": 47.5409836066
+    },
+    {
+        "year": 2003,
+        "label": "positiv",
+        "percentage": 32.7868852459
+    },
+    {
+        "year": 2003,
+        "label": "negativ",
+        "percentage": 19.6721311475
+    },
+    {
+        "year": 2004,
+        "label": "neutral",
+        "percentage": 50.0
+    },
+    {
+        "year": 2004,
+        "label": "positiv",
+        "percentage": 37.1794871795
+    },
+    {
+        "year": 2004,
+        "label": "negativ",
+        "percentage": 12.8205128205
+    },
+    {
+        "year": 2005,
+        "label": "neutral",
+        "percentage": 40.9090909091
+    },
+    {
+        "year": 2005,
+        "label": "positiv",
+        "percentage": 37.8787878788
+    },
+    {
+        "year": 2005,
+        "label": "negativ",
+        "percentage": 21.2121212121
+    },
+    {
+        "year": 2006,
+        "label": "neutral",
+        "percentage": 48.9361702128
+    },
+    {
+        "year": 2006,
+        "label": "positiv",
+        "percentage": 36.170212766
+    },
+    {
+        "year": 2006,
+        "label": "negativ",
+        "percentage": 14.8936170213
+    },
+    {
+        "year": 2007,
+        "label": "positiv",
+        "percentage": 43.0555555556
+    },
+    {
+        "year": 2007,
+        "label": "neutral",
+        "percentage": 40.2777777778
+    },
+    {
+        "year": 2007,
+        "label": "negativ",
+        "percentage": 16.6666666667
+    },
+    {
+        "year": 2008,
+        "label": "positiv",
+        "percentage": 48.6842105263
+    },
+    {
+        "year": 2008,
+        "label": "neutral",
+        "percentage": 43.4210526316
+    },
+    {
+        "year": 2008,
+        "label": "negativ",
+        "percentage": 7.8947368421
+    },
+    {
+        "year": 2009,
+        "label": "neutral",
+        "percentage": 44.8275862069
+    },
+    {
+        "year": 2009,
+        "label": "positiv",
+        "percentage": 42.5287356322
+    },
+    {
+        "year": 2009,
+        "label": "negativ",
+        "percentage": 12.6436781609
+    },
+    {
+        "year": 2010,
+        "label": "positiv",
+        "percentage": 41.5384615385
+    },
+    {
+        "year": 2010,
+        "label": "neutral",
+        "percentage": 41.5384615385
+    },
+    {
+        "year": 2010,
+        "label": "negativ",
+        "percentage": 16.9230769231
+    },
+    {
+        "year": 2011,
+        "label": "positiv",
+        "percentage": 42.3076923077
+    },
+    {
+        "year": 2011,
+        "label": "neutral",
+        "percentage": 39.7435897436
+    },
+    {
+        "year": 2011,
+        "label": "negativ",
+        "percentage": 17.9487179487
+    },
+    {
+        "year": 2012,
+        "label": "neutral",
+        "percentage": 51.3888888889
+    },
+    {
+        "year": 2012,
+        "label": "positiv",
+        "percentage": 36.1111111111
+    },
+    {
+        "year": 2012,
+        "label": "negativ",
+        "percentage": 12.5
+    },
+    {
+        "year": 2013,
+        "label": "neutral",
+        "percentage": 58.9473684211
+    },
+    {
+        "year": 2013,
+        "label": "positiv",
+        "percentage": 31.5789473684
+    },
+    {
+        "year": 2013,
+        "label": "negativ",
+        "percentage": 9.4736842105
+    },
+    {
+        "year": 2014,
+        "label": "neutral",
+        "percentage": 58.0357142857
+    },
+    {
+        "year": 2014,
+        "label": "positiv",
+        "percentage": 30.3571428571
+    },
+    {
+        "year": 2014,
+        "label": "negativ",
+        "percentage": 11.6071428571
+    },
+    {
+        "year": 2015,
+        "label": "positiv",
+        "percentage": 46.0674157303
+    },
+    {
+        "year": 2015,
+        "label": "neutral",
+        "percentage": 41.5730337079
+    },
+    {
+        "year": 2015,
+        "label": "negativ",
+        "percentage": 12.3595505618
+    },
+    {
+        "year": 2016,
+        "label": "neutral",
+        "percentage": 45.871559633
+    },
+    {
+        "year": 2016,
+        "label": "positiv",
+        "percentage": 44.9541284404
+    },
+    {
+        "year": 2016,
+        "label": "negativ",
+        "percentage": 9.1743119266
+    },
+    {
+        "year": 2017,
+        "label": "neutral",
+        "percentage": 54.8387096774
+    },
+    {
+        "year": 2017,
+        "label": "positiv",
+        "percentage": 35.4838709677
+    },
+    {
+        "year": 2017,
+        "label": "negativ",
+        "percentage": 9.6774193548
+    },
+    {
+        "year": 2018,
+        "label": "neutral",
+        "percentage": 54.2857142857
+    },
+    {
+        "year": 2018,
+        "label": "positiv",
+        "percentage": 28.5714285714
+    },
+    {
+        "year": 2018,
+        "label": "negativ",
+        "percentage": 17.1428571429
+    },
+    {
+        "year": 2019,
+        "label": "positiv",
+        "percentage": 44.4444444444
+    },
+    {
+        "year": 2019,
+        "label": "neutral",
+        "percentage": 43.2098765432
+    },
+    {
+        "year": 2019,
+        "label": "negativ",
+        "percentage": 12.3456790123
+    },
+    {
+        "year": 2020,
+        "label": "neutral",
+        "percentage": 41.4141414141
+    },
+    {
+        "year": 2020,
+        "label": "positiv",
+        "percentage": 40.404040404
+    },
+    {
+        "year": 2020,
+        "label": "negativ",
+        "percentage": 18.1818181818
+    },
+    {
+        "year": 2021,
+        "label": "neutral",
+        "percentage": 48.4536082474
+    },
+    {
+        "year": 2021,
+        "label": "positiv",
+        "percentage": 40.206185567
+    },
+    {
+        "year": 2021,
+        "label": "negativ",
+        "percentage": 11.3402061856
+    },
+    {
+        "year": 2022,
+        "label": "neutral",
+        "percentage": 47.2727272727
+    },
+    {
+        "year": 2022,
+        "label": "positiv",
+        "percentage": 40.0
+    },
+    {
+        "year": 2022,
+        "label": "negativ",
+        "percentage": 12.7272727273
+    },
+    {
+        "year": 2023,
+        "label": "neutral",
+        "percentage": 58.7786259542
+    },
+    {
+        "year": 2023,
+        "label": "positiv",
+        "percentage": 29.7709923664
+    },
+    {
+        "year": 2023,
+        "label": "negativ",
+        "percentage": 11.4503816794
+    }
+]
